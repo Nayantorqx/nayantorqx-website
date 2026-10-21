@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NayanTorqx | Bike Expert Service & Tips</title>
+  <title>Nayan Torq X | Professional Motorcycle Service & Expert Tips</title>
+  
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -26,21 +27,21 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Hind Siliguri', sans-serif;
+      font-family: 'Poppins', 'Hind Siliguri', sans-serif;
     }
 
     body {
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding-bottom: 60px;
+      padding-bottom: 70px;
     }
 
-    /* কভার ব্যানার */
+    /* ব্যানার */
     .banner {
       width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      height: 220px;
+      background: linear-gradient(135deg, #091224 0%, #1e293b 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,20 +55,20 @@
     }
 
     .container {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 0 16px;
     }
 
-    /* প্রোফাইল তথ্য */
+    /* লোগো ও হেডার পরিচিতি */
     .profile-area {
       text-align: center;
       margin-top: -65px;
       margin-bottom: 25px;
     }
-    .avatar {
-      width: 125px;
-      height: 125px;
+    .logo-img {
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       border: 4px solid var(--primary);
       background-color: var(--card-bg);
@@ -75,7 +76,7 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
     .profile-area h1 {
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: #fff;
       margin-top: 10px;
@@ -98,11 +99,11 @@
     .exp-text {
       color: var(--green);
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.02rem;
       margin-top: 8px;
     }
 
-    /* অল সোশ্যাল লিংক বাটন */
+    /* সোশ্যাল লিংক বাটন */
     .links-grid {
       display: flex;
       flex-direction: column;
@@ -129,9 +130,6 @@
       border-color: var(--accent);
       transform: translateY(-2px);
     }
-    .link-item i {
-      font-size: 1.2rem;
-    }
 
     /* সেকশন কার্ড */
     .section-card {
@@ -140,6 +138,7 @@
       border-radius: 14px;
       padding: 22px;
       margin-bottom: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
     .section-title {
       font-size: 1.25rem;
@@ -168,9 +167,14 @@
     .schedule-box p {
       font-size: 0.92rem;
       color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .schedule-box .en-text {
+      color: #7dd3fc;
+      font-size: 0.88rem;
     }
 
-    /* শিক্ষণীয় টিপস */
+    /* টিপস */
     .tip-box {
       background: rgba(11, 17, 32, 0.6);
       border: 1px solid var(--card-border);
@@ -178,12 +182,12 @@
       border-radius: 8px;
       margin-bottom: 10px;
       display: flex;
-      gap: 10px;
+      gap: 12px;
       align-items: flex-start;
     }
     .tip-box i {
       color: var(--accent);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-top: 3px;
     }
     .tip-box h4 {
@@ -195,8 +199,13 @@
       font-size: 0.9rem;
       color: var(--text-muted);
     }
+    .tip-box .en-tip {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
 
-    /* ভিডিও প্লেয়ার */
+    /* ভিডিও */
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -229,8 +238,13 @@
     }
     .review-item p {
       font-size: 0.92rem;
-      color: var(--text-muted);
+      color: #cbd5e1;
       font-style: italic;
+      margin-bottom: 4px;
+    }
+    .review-item .en-review {
+      font-size: 0.85rem;
+      color: var(--text-muted);
       margin-bottom: 6px;
     }
     .author {
@@ -239,122 +253,163 @@
       font-weight: 600;
     }
 
-    /* কাজের গ্যালারি */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+    /* সবার নিচে পরিচিতি ও ছবি (About Me) */
+    .about-me-card {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border: 2px solid var(--primary);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 30px;
     }
-    .gallery-item {
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--card-border);
-      aspect-ratio: 4/3;
-      background: #000;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
+    .my-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 14px;
       object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+    .about-details h2 {
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .about-details .role {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .about-details p {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+    .about-details .en-bio {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 650px) {
+      .about-me-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .my-photo {
+        width: 120px;
+        height: 120px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ব্যানার -->
+  <!-- ১. ব্যানার ছবি (banner.png) -->
   <div class="banner">
-    <img src="banner.png" alt="Banner" onerror="this.style.display='none'">
+    <img src="banner.png" alt="NayanTorqx Banner" onerror="this.style.display='none'">
   </div>
 
   <div class="container">
-    <!-- প্রোফাইল পরিচিতি -->
+    <!-- ২. লোগো ও হেডার টাইটেল -->
     <div class="profile-area">
-      <img src="logo.png" alt="NayanTorqx" class="avatar" onerror="this.src='https://via.placeholder.com/125/1e293b/38bdf8?text=Nayan'">
-      <h1>NayanTorqx</h1>
-      <div class="tagline">Bike Expert Service Center</div>
+      <img src="logo.png" alt="NayanTorqx Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/130/1e293b/38bdf8?text=NT+Logo'">
+      <h1>Nayan Torq X</h1>
+      <div class="tagline">Bike Expert Service Center | মোটরসাইকেল বিশেষজ্ঞ সেবা</div>
       <div class="location"><i class="fa-solid fa-location-dot"></i> Tejgaon Industrial Area, Dhaka</div>
-      <div class="exp-text">⚡ 20+ Years of Experience in Professional Motorcycle Service, Maintenance & Tips</div>
+      <div class="exp-text">⚡ 20+ Years Experience | ২০+ বছরের বিশ্বস্ত অভিজ্ঞতা</div>
     </div>
 
-    <!-- সোশ্যাল মিডিয়া ও গুরুত্বপূর্ণ লিংক -->
+    <!-- ৩. সোশ্যাল মিডিয়া ও কন্টাক্ট লিংক -->
     <div class="links-grid">
-      <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel</a>
-      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page</a>
+      <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel (সাবস্ক্রাইব করুন)</a>
+      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page (লাইক ও ফলো করুন)</a>
       <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-solid fa-user" style="color: #38bdf8;"></i> Facebook Profile</a>
-      <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram</a>
-      <a href="https://tiktok.com" target="_blank" class="link-item"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+      <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram Profile</a>
+      <a href="https://tiktok.com" target="_blank" class="link-item"><i class="fa-brands fa-tiktok"></i> TikTok Profile</a>
     </div>
 
-    <!-- সার্ভিস শিডিউল -->
+    <!-- ৪. প্রো সার্ভিস শিডিউল (বাংলা ও ইংলিশ) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল ও গাইড</div>
+      <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল | Service Guide</div>
       <div class="schedule-box">
         <h3>⚪ জেনারেল সার্ভিস (General Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব ও টেনশন চেক।</p>
+        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব।</p>
+        <p class="en-text"><strong>Interval:</strong> Every 2,500 - 3,000 km. Includes Carburetor/FI cleaning, spark plug check, air filter clean, clutch/brake adjustment & chain maintenance.</p>
       </div>
       <div class="schedule-box">
         <h3>🔴 মাস্টার সার্ভিস (Master Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। পুরো বাইকের নিখুঁত পার্টস ক্লিনিং, ইঞ্জিন টিউনিং, ট্যাপেট অ্যাডজাস্টমেন্ট ও সামগ্রিক ডায়াগনোসিস।</p>
+        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। বিস্তারিত ইঞ্জিন ও পার্টস ক্লিনিং, ট্যাপেট অ্যাডজাস্টমেন্ট ও ফুল বাইক ডায়াগনোসিস।</p>
+        <p class="en-text"><strong>Interval:</strong> Every 8,000 - 10,000 km. Complete engine tuning, tappet adjustment, deep parts cleaning & comprehensive checkup.</p>
       </div>
     </div>
 
-    <!-- রাইডারদের জন্য শিক্ষণীয় টিপস -->
+    <!-- ৫. শিক্ষণীয় রাইডার টিপস (বাংলা ও ইংলিশ) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-lightbulb"></i> রাইডারদের জন্য শিক্ষণীয় টিপস</div>
+      <div class="section-title"><i class="fa-solid fa-lightbulb"></i> রাইডারদের জন্য টিপস | Rider Tips</div>
       <div class="tip-box">
         <i class="fa-solid fa-circle-check"></i>
         <div>
-          <h4>ইঞ্জিন অয়েল নির্বাচন ও সঠিক গ্রেড</h4>
+          <h4>ইঞ্জিন অয়েল ও সঠিক গ্রেড | Engine Oil Grade</h4>
           <p>বাইকের ম্যানুয়াল অনুযায়ী সঠিক গ্রেডের ইঞ্জিন অয়েল ব্যবহার করুন এবং সময়মতো ড্রেন দিন।</p>
+          <p class="en-tip">Always use manufacturer-recommended engine oil grade and change it on schedule.</p>
         </div>
       </div>
       <div class="tip-box">
         <i class="fa-solid fa-circle-check"></i>
         <div>
-          <h4>সঠিক টায়ার প্রেশার বজায় রাখা</h4>
-          <p>সপ্তাহে অন্তত একবার টায়ারের হাওয়া চেক করুন। সঠিক প্রেশার মাইলেজ ও ব্যালান্স দুটোই ঠিক রাখে।</p>
+          <h4>টায়ার প্রেশার বজায় রাখা | Tyre Pressure</h4>
+          <p>নিয়মিত টায়ারের হাওয়া চেক করুন। সঠিক প্রেশার মাইলেজ ও ব্যালান্স দুটোই ঠিক রাখে।</p>
+          <p class="en-tip">Maintain proper tyre pressure weekly for better fuel economy and riding safety.</p>
         </div>
       </div>
       <div class="tip-box">
         <i class="fa-solid fa-circle-check"></i>
         <div>
-          <h4>ড্রাইভ চেইন মেইনটেন্যান্স</h4>
-          <p>প্রতি ৫০০ কিমি পর চেইন পরিষ্কার করে চেইন লুব ব্যবহার করুন, পোড়া মবিল চেইনের আয়ু কমিয়ে দেয়।</p>
+          <h4>ড্রাইভ চেইন যত্ন | Chain Maintenance</h4>
+          <p>প্রতি ৫০০ কিমিতে চেইন লুব করুন। পোড়া মবিল কখনো চেইনে দেবেন না।</p>
+          <p class="en-tip">Clean and lubricate the drive chain every 500 km. Avoid using used engine oil.</p>
         </div>
       </div>
     </div>
 
-    <!-- কাজের ভিডিও -->
+    <!-- ৬. কাজের ভিডিও (YouTube Video) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-video"></i> কাজের ভিডিও ও টিউটোরিয়াল</div>
+      <div class="section-title"><i class="fa-solid fa-video"></i> কাজের ভিডিও | Latest Work Video</div>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed?listType=user_uploads" allowfullscreen></iframe>
       </div>
     </div>
 
-    <!-- কাস্টমারদের রিভিউ -->
+    <!-- ৭. কাস্টমার রিভিউ (বাংলা ও ইংলিশ) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-star"></i> গ্রাহকদের রিভিউ ও মতামত</div>
+      <div class="section-title"><i class="fa-solid fa-star"></i> কাস্টমার রিভিউ | Customer Reviews</div>
       <div class="review-item">
         <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <p>"নয়ন ভাইয়ের কাজের হাত খুবই নিখুঁত। বাইকের পিকআপের ঝামেলা নিমেষেই সমাধান করে দিয়েছেন।"</p>
-        <div class="author">— তানভীর আহমেদ (বাইক রাইডার)</div>
+        <p class="en-review">"Exceptional craftsmanship. Diagnosed and fixed my bike's pick-up issue smoothly."</p>
+        <div class="author">— তানভীর আহমেদ / Tanvir Ahmed (FZ-S)</div>
       </div>
       <div class="review-item">
         <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <p>"২০ বছরের অভিজ্ঞতার সঠিক মূল্যায়ন পেয়েছি। কোনো অপ্রয়োজনীয় পার্টস বদলানোর পরামর্শ দেন না।"</p>
-        <div class="author">— রাশেদুল ইসলাম (বাইক ওনার)</div>
+        <p class="en-review">"20+ years of solid experience clearly reflects in his work. Highly recommended."</p>
+        <div class="author">— রাশেদুল ইসলাম / Rashedul Islam (RTR 4V)</div>
       </div>
     </div>
 
-    <!-- কাজের গ্যালারি -->
-    <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-camera"></i> রিসেন্ট কাজের ছবি</div>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="1.png" alt="Work 1" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+1'"></div>
-        <div class="gallery-item"><img src="2.png" alt="Work 2" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+2'"></div>
-        <div class="gallery-item"><img src="3.png" alt="Work 3" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+3'"></div>
-        <div class="gallery-item"><img src="4.png" alt="Work 4" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+4'"></div>
+    <!-- ৮. সবার নিচে আপনার নিজের ছবি সহ পরিচিতি (About Me) -->
+    <div class="about-me-card">
+      <img src="profile.jpg" alt="Md Mejbauddin Nayan" class="my-photo" onerror="this.src='https://via.placeholder.com/140/1e293b/38bdf8?text=My+Photo'">
+      <div class="about-details">
+        <h2>Md Mejbauddin Nayan</h2>
+        <div class="role">Automotive Technician & Motorcycle Specialist</div>
+        <p>মোটরসাইকেল সার্ভিসিং ও ইঞ্জিন ডায়াগনোসিসে আমার দীর্ঘ ২০ বছরেরও বেশি সময়ের বাস্তব অভিজ্ঞতা রয়েছে। আপনার মূল্যবান বাইকের সর্বোত্তম পারফরম্যান্স এবং সঠিক মেইনটেন্যান্স নিশ্চিত করাই আমার লক্ষ্য।</p>
+        <p class="en-bio">With over 20 years of hands-on expertise in motorcycle maintenance, engine diagnostics, and tuning, I am dedicated to keeping your ride safe, reliable, and performing at its best.</p>
       </div>
     </div>
 
