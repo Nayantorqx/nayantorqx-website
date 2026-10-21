@@ -4,80 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NayanTorqx | Bike Expert Service Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --bg: #0b1120;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Hind Siliguri', sans-serif;
     }
+
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
+      background-color: var(--bg);
+      color: var(--text-main);
       line-height: 1.6;
-      padding-bottom: 50px;
+      padding-bottom: 60px;
     }
-    .header-banner {
+
+    /* ব্যানার সেকশন */
+    .banner-container {
       width: 100%;
-      max-height: 250px;
+      height: 220px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      position: relative;
       overflow: hidden;
       display: flex;
-      justify-content: center;
       align-items: center;
-      background: #1e293b;
+      justify-content: center;
+      border-bottom: 2px solid var(--card-border);
     }
-    .header-banner img {
+
+    .banner-container img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .container {
-      max-width: 850px;
+
+    /* প্রোফাইল ও হেডার */
+    .main-wrapper {
+      max-width: 800px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 16px;
+    }
+
+    .profile-header {
       text-align: center;
+      margin-top: -65px;
+      margin-bottom: 30px;
+      position: relative;
     }
-    .profile-img {
-      width: 110px;
-      height: 110px;
+
+    .profile-logo {
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 4px solid #38bdf8;
-      margin-top: -55px;
-      background: #0f172a;
+      border: 4px solid var(--accent);
+      background-color: var(--card-bg);
       object-fit: cover;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
-    h1 {
+
+    .profile-header h1 {
       font-size: 2.2rem;
-      color: #38bdf8;
-      margin-top: 10px;
+      color: #fff;
+      margin-top: 12px;
       font-weight: 700;
     }
-    .subtitle {
-      font-size: 1.1rem;
-      color: #94a3b8;
-      margin-bottom: 8px;
-    }
-    .location {
+
+    .profile-header .badge {
       display: inline-block;
-      background: #1e293b;
-      color: #38bdf8;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      margin-top: 6px;
     }
-    .exp-badge {
-      font-weight: 600;
+
+    .profile-header .experience {
       color: #34d399;
-      margin-bottom: 25px;
+      font-weight: 600;
+      margin-top: 8px;
+      font-size: 1.05rem;
     }
-    .social-links {
+
+    /* সোশ্যাল বাটন */
+    .action-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-bottom: 30px;
+      gap: 12px;
+      margin-top: 18px;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -87,130 +116,137 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: 0.2s ease;
+      transition: all 0.2s ease;
+      color: #fff;
     }
-    .btn-yt {
-      background: #ef4444;
-      color: white;
+
+    .btn-youtube { background-color: #ef4444; }
+    .btn-youtube:hover { background-color: #dc2626; }
+    .btn-facebook { background-color: #1877f2; }
+    .btn-facebook:hover { background-color: #166fe5; }
+
+    /* কার্ড ও সেকশন */
+    .section-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    .btn-fb {
-      background: #1877f2;
-      color: white;
-    }
-    .btn:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-    }
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: left;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
-    }
-    .card h2 {
-      color: #38bdf8;
-      font-size: 1.4rem;
-      margin-bottom: 15px;
+
+    .section-title {
+      font-size: 1.35rem;
+      color: var(--accent);
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 10px;
     }
-    .service-item {
-      margin-bottom: 15px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #334155;
+
+    .service-box {
+      margin-bottom: 16px;
+      background: rgba(15, 23, 42, 0.4);
+      padding: 16px;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
     }
-    .service-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+
+    .service-box h3 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 6px;
     }
-    .service-item h3 {
-      font-size: 1.05rem;
-      color: #f1f5f9;
-      margin-bottom: 5px;
-    }
-    .service-item p {
-      color: #94a3b8;
+
+    .service-box p {
+      color: var(--text-muted);
       font-size: 0.95rem;
     }
-    /* Gallery Section */
-    .gallery-title {
-      font-size: 1.5rem;
-      color: #38bdf8;
-      margin-bottom: 15px;
-      text-align: left;
-    }
+
+    /* ৪টি ছবির গ্যালারি গ্রিড */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
-    .gallery-item {
-      border-radius: 8px;
+
+    .gallery-card {
+      border-radius: 10px;
       overflow: hidden;
-      border: 2px solid #334155;
+      border: 1px solid var(--card-border);
       background: #0f172a;
-      aspect-ratio: 1/1;
+      aspect-ratio: 4/3;
     }
-    .gallery-item img {
+
+    .gallery-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s ease;
+      display: block;
     }
-    .gallery-item img:hover {
-      transform: scale(1.05);
+
+    .gallery-card img:hover {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .profile-header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Banner -->
-  <div class="header-banner">
+  <!-- ১. ব্যানার ছবি (banner.png) -->
+  <div class="banner-container">
     <img src="banner.png" alt="NayanTorqx Banner" onerror="this.style.display='none'">
   </div>
 
-  <div class="container">
-    <!-- Logo / Profile -->
-    <img src="logo.png" alt="NayanTorqx" class="profile-img" onerror="this.src='https://via.placeholder.com/110?text=NT'">
+  <div class="main-wrapper">
+    <!-- ২. প্রোফাইল ও তথ্য -->
+    <div class="profile-header">
+      <img src="logo.png" alt="NayanTorqx Logo" class="profile-logo" onerror="this.src='https://via.placeholder.com/130?text=Logo'">
+      <h1>Nayan Torq X</h1>
+      <div class="badge">📍 Tejgaon Industrial Area, Dhaka</div>
+      <div class="experience">⚡ ২০+ বছরের বিশ্বস্ত ও প্রফেশনাল অভিজ্ঞতা</div>
 
-    <h1>Nayan Torq X</h1>
-    <div class="subtitle">Bike Expert Service Center</div>
-    <div class="location">📍 Tejgaon Industrial Area</div>
-    <div class="exp-badge">20+ Years of Trusted Experience | ২০ বছরের বিশ্বস্ত ও প্রফেশনাল অভিজ্ঞতা</div>
-
-    <!-- Social Buttons -->
-    <div class="social-links">
-      <a href="https://youtube.com" target="_blank" class="btn btn-yt">📺 Subscribe</a>
-      <a href="https://facebook.com" target="_blank" class="btn btn-fb">👍 Like & Page</a>
-    </div>
-
-    <!-- Service Schedule Card -->
-    <div class="card">
-      <h2>🛠️ Expert Services & Guide | প্রো সার্ভিস শিডিউল</h2>
-      <div class="service-item">
-        <h3>⚪ গ্রুপ ১: জেনারেল সার্ভিস (General Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। নিয়মিত রাইডে ইঞ্জিন অয়েলের লুব্রিকেশন ক্ষমতা কমে ও ফিল্টারে ময়লা জমে পিকআপ ও মাইলেজ ড্রপ করে। যা করা হয়: কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার পরিষ্কার, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব ও টেনশন চেক।</p>
-      </div>
-      <div class="service-item">
-        <h3>🔴 গ্রুপ ২: মাস্টার সার্ভিস (Master Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। বিস্তারিত ইঞ্জিন ও পার্টস ক্লিনিং, ট্যাপেট অ্যাডজাস্টমেন্ট ও নিখুঁত টিউনিং।</p>
+      <!-- সোশ্যাল লিংক (আপনার লিংকগুলো এখানে বসাবেন) -->
+      <div class="action-buttons">
+        <a href="https://youtube.com" target="_blank" class="btn btn-youtube">📺 YouTube Channel</a>
+        <a href="https://facebook.com" target="_blank" class="btn btn-facebook">👍 Facebook Page</a>
       </div>
     </div>
 
-    <!-- Photo Gallery Card -->
-    <div class="card">
-      <h2 class="gallery-title">📸 কাজের গ্যালারি (Recent Works)</h2>
+    <!-- ৩. সার্ভিস শিডিউল -->
+    <div class="section-card">
+      <div class="section-title">🛠️ এক্সপার্ট সার্ভিস শিডিউল</div>
+      
+      <div class="service-box">
+        <h3>⚪ জেনারেল সার্ভিস (General Service)</h3>
+        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। নিয়মিত রাইডে ইঞ্জিন অয়েলের কার্যক্ষমতা কমে ও ফিল্টারে ময়লা জমে। যা করা হয়: কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ-ব্রেক অ্যাডজাস্ট ও চেইন লুব।</p>
+      </div>
+
+      <div class="service-box">
+        <h3>🔴 মাস্টার সার্ভিস (Master Service)</h3>
+        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। পুরো বাইকের নিখুঁত পার্টস ক্লিনিং, ইঞ্জিন টিউনিং, ট্যাপেট অ্যাডজাস্টমেন্ট ও সামগ্রিক ডায়াগনোসিস।</p>
+      </div>
+    </div>
+
+    <!-- ৪. রিসেন্ট কাজের ৪টি ছবি (1.png, 2.png, 3.png, 4.png) -->
+    <div class="section-card">
+      <div class="section-title">📸 কাজের গ্যালারি (Recent Works)</div>
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="1.png" alt="Work 1"></div>
-        <div class="gallery-item"><img src="2.png" alt="Work 2"></div>
-        <div class="gallery-item"><img src="3.png" alt="Work 3"></div>
-        <div class="gallery-item"><img src="4.png" alt="Work 4"></div>
+        <div class="gallery-card"><img src="1.png" alt="Work 1" onerror="this.src='https://via.placeholder.com/400x300?text=Work+1'"></div>
+        <div class="gallery-card"><img src="2.png" alt="Work 2" onerror="this.src='https://via.placeholder.com/400x300?text=Work+2'"></div>
+        <div class="gallery-card"><img src="3.png" alt="Work 3" onerror="this.src='https://via.placeholder.com/400x300?text=Work+3'"></div>
+        <div class="gallery-card"><img src="4.png" alt="Work 4" onerror="this.src='https://via.placeholder.com/400x300?text=Work+4'"></div>
       </div>
     </div>
 
