@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nayan Torq X | Bike Expert Service Center</title>
+  <title>NayanTorqx | Bike Expert Service & Tips</title>
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +12,14 @@
 
   <style>
     :root {
-      --bg-dark: #070d19;
-      --card-bg: #111d33;
-      --card-border: #1e2e4a;
+      --bg: #0b1120;
+      --card-bg: #1e293b;
+      --card-border: #334155;
       --primary: #38bdf8;
-      --primary-glow: rgba(56, 189, 248, 0.2);
-      --accent-green: #10b981;
-      --accent-orange: #f97316;
-      --text-white: #f8fafc;
-      --text-gray: #94a3b8;
+      --accent: #f97316;
+      --green: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
     }
 
     * {
@@ -31,163 +30,182 @@
     }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-white);
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      padding-bottom: 70px;
+      padding-bottom: 60px;
     }
 
-    /* ব্যানার সেকশন */
-    .banner-wrapper {
+    /* কভার ব্যানার */
+    .banner {
       width: 100%;
-      height: 240px;
-      background: linear-gradient(135deg, #091224, #1a2942);
-      position: relative;
-      overflow: hidden;
+      height: 200px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       border-bottom: 2px solid var(--card-border);
     }
-    .banner-wrapper img {
+    .banner img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    /* কনটেইনার */
     .container {
-      max-width: 880px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 0 16px;
     }
 
-    /* প্রোফাইল হেডার */
-    .profile-card {
+    /* প্রোফাইল তথ্য */
+    .profile-area {
       text-align: center;
-      margin-top: -70px;
-      margin-bottom: 30px;
-      position: relative;
+      margin-top: -65px;
+      margin-bottom: 25px;
     }
-    .profile-img {
-      width: 135px;
-      height: 135px;
+    .avatar {
+      width: 125px;
+      height: 125px;
       border-radius: 50%;
       border: 4px solid var(--primary);
       background-color: var(--card-bg);
       object-fit: cover;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
-    .profile-card h1 {
-      font-size: 2.2rem;
+    .profile-area h1 {
+      font-size: 2.1rem;
       font-weight: 700;
-      color: var(--text-white);
-      margin-top: 12px;
-      letter-spacing: 0.5px;
-    }
-    .profile-card .tagline {
-      font-size: 1.15rem;
-      color: var(--primary);
-      font-weight: 600;
-    }
-    .location-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #1e2e4a;
-      color: var(--text-white);
-      padding: 5px 16px;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      margin: 10px 0;
-      border: 1px solid #2d4268;
-    }
-    .exp-badge {
-      color: var(--accent-green);
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 18px;
-    }
-
-    /* সোশ্যাল ও অ্যাকশন বাটন */
-    .btn-group {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      color: #fff;
       margin-top: 10px;
     }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 22px;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      color: #fff;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    .btn-yt { background: #ef4444; }
-    .btn-yt:hover { background: #dc2626; transform: translateY(-2px); }
-    .btn-fb { background: #1877f2; }
-    .btn-fb:hover { background: #1464cc; transform: translateY(-2px); }
-    .btn-call { background: var(--accent-green); }
-    .btn-call:hover { background: #059669; transform: translateY(-2px); }
-
-    /* মেইন কার্ড লেআউট */
-    .content-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 25px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    }
-    .box-header {
-      font-size: 1.35rem;
+    .tagline {
+      font-size: 1.05rem;
       color: var(--primary);
-      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .location {
+      display: inline-block;
+      background: #1e293b;
+      color: #e2e8f0;
+      border: 1px solid var(--card-border);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+    .exp-text {
+      color: var(--green);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+
+    /* অল সোশ্যাল লিংক বাটন */
+    .links-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .link-item {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
+      background: #1e293b;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid var(--card-border);
+      transition: all 0.2s ease;
+    }
+    .link-item:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .link-item i {
+      font-size: 1.2rem;
+    }
+
+    /* সেকশন কার্ড */
+    .section-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+    .section-title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 12px;
+      padding-bottom: 10px;
     }
 
     /* সার্ভিস শিডিউল */
-    .schedule-item {
-      background: rgba(7, 13, 25, 0.6);
-      border: 1px solid #1e2e4a;
+    .schedule-box {
+      background: rgba(11, 17, 32, 0.6);
       border-left: 4px solid var(--primary);
-      padding: 16px;
-      border-radius: 10px;
-      margin-bottom: 14px;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
     }
-    .schedule-item:last-child { margin-bottom: 0; }
-    .schedule-item h3 {
-      font-size: 1.1rem;
+    .schedule-box h3 {
+      font-size: 1.05rem;
       color: #fff;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
-    .schedule-item p {
-      color: var(--text-gray);
-      font-size: 0.95rem;
+    .schedule-box p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
     }
 
-    /* ভিডিও প্লেয়ার সেকশন */
-    .video-wrapper {
+    /* শিক্ষণীয় টিপস */
+    .tip-box {
+      background: rgba(11, 17, 32, 0.6);
+      border: 1px solid var(--card-border);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .tip-box i {
+      color: var(--accent);
+      font-size: 1.1rem;
+      margin-top: 3px;
+    }
+    .tip-box h4 {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .tip-box p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ভিডিও প্লেয়ার */
+    .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      padding-bottom: 56.25%;
       height: 0;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
       border: 1px solid var(--card-border);
-      margin-top: 10px;
     }
-    .video-wrapper iframe {
+    .video-container iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -196,195 +214,147 @@
       border: none;
     }
 
-    /* শিক্ষণীয় টিপস */
-    .tips-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .tips-item {
-      background: rgba(7, 13, 25, 0.5);
-      border: 1px solid var(--card-border);
-      padding: 14px;
-      border-radius: 10px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .tips-item i {
-      color: var(--accent-orange);
-      font-size: 1.2rem;
-      margin-top: 3px;
-    }
-    .tips-item h4 {
-      font-size: 1.05rem;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-    .tips-item p {
-      color: var(--text-gray);
-      font-size: 0.92rem;
-    }
-
     /* কাস্টমার রিভিউ */
-    .review-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 10px;
-    }
-    .review-card {
-      background: rgba(7, 13, 25, 0.6);
+    .review-item {
+      background: rgba(11, 17, 32, 0.6);
       border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 18px;
-    }
-    .review-stars {
-      color: #fbbf24;
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-    }
-    .review-text {
-      font-size: 0.95rem;
-      color: var(--text-gray);
+      border-radius: 10px;
+      padding: 14px;
       margin-bottom: 12px;
-      font-style: italic;
     }
-    .reviewer-name {
-      font-weight: 600;
+    .stars {
+      color: #fbbf24;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+    }
+    .review-item p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+    .author {
+      font-size: 0.9rem;
       color: var(--primary);
-      font-size: 0.95rem;
+      font-weight: 600;
     }
 
     /* কাজের গ্যালারি */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      gap: 12px;
     }
-    .gallery-box {
-      border-radius: 10px;
+    .gallery-item {
+      border-radius: 8px;
       overflow: hidden;
       border: 1px solid var(--card-border);
       aspect-ratio: 4/3;
       background: #000;
     }
-    .gallery-box img {
+    .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    .gallery-box img:hover {
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 600px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .profile-card h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ১. ব্যানার ছবি (banner.png) -->
-  <div class="banner-wrapper">
-    <img src="banner.png" alt="NayanTorqx Banner" onerror="this.style.display='none'">
+  <!-- ব্যানার -->
+  <div class="banner">
+    <img src="banner.png" alt="Banner" onerror="this.style.display='none'">
   </div>
 
   <div class="container">
-    <!-- ২. প্রোফাইল ও বিবরণ -->
-    <div class="profile-card">
-      <img src="logo.png" alt="Nayan Torq X" class="profile-img" onerror="this.src='https://via.placeholder.com/135/111d33/38bdf8?text=NT'">
-      <h1>Nayan Torq X</h1>
+    <!-- প্রোফাইল পরিচিতি -->
+    <div class="profile-area">
+      <img src="logo.png" alt="NayanTorqx" class="avatar" onerror="this.src='https://via.placeholder.com/125/1e293b/38bdf8?text=Nayan'">
+      <h1>NayanTorqx</h1>
       <div class="tagline">Bike Expert Service Center</div>
-      <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Tejgaon Industrial Area, Dhaka</div>
-      <div class="exp-badge">⚡ 20+ Years of Trusted Experience | ২০ বছরের বিশ্বস্ত অভিজ্ঞতা</div>
+      <div class="location"><i class="fa-solid fa-location-dot"></i> Tejgaon Industrial Area, Dhaka</div>
+      <div class="exp-text">⚡ 20+ Years of Experience in Professional Motorcycle Service, Maintenance & Tips</div>
+    </div>
 
-      <!-- সোশ্যাল ও কল বাটন -->
-      <div class="btn-group">
-        <a href="https://youtube.com/@nayantorqx" target="_blank" class="btn btn-yt"><i class="fa-brands fa-youtube"></i> Subscribe</a>
-        <a href="https://facebook.com" target="_blank" class="btn btn-fb"><i class="fa-brands fa-facebook"></i> Facebook Page</a>
-        <a href="tel:+8801700000000" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call Now</a>
+    <!-- সোশ্যাল মিডিয়া ও গুরুত্বপূর্ণ লিংক -->
+    <div class="links-grid">
+      <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel</a>
+      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page</a>
+      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-solid fa-user" style="color: #38bdf8;"></i> Facebook Profile</a>
+      <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram</a>
+      <a href="https://tiktok.com" target="_blank" class="link-item"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+    </div>
+
+    <!-- সার্ভিস শিডিউল -->
+    <div class="section-card">
+      <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল ও গাইড</div>
+      <div class="schedule-box">
+        <h3>⚪ জেনারেল সার্ভিস (General Service)</h3>
+        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব ও টেনশন চেক।</p>
+      </div>
+      <div class="schedule-box">
+        <h3>🔴 মাস্টার সার্ভিস (Master Service)</h3>
+        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। পুরো বাইকের নিখুঁত পার্টস ক্লিনিং, ইঞ্জিন টিউনিং, ট্যাপেট অ্যাডজাস্টমেন্ট ও সামগ্রিক ডায়াগনোসিস।</p>
       </div>
     </div>
 
-    <!-- ৩. এক্সপার্ট সার্ভিস শিডিউল -->
-    <div class="content-box">
-      <div class="box-header"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল ও গাইড</div>
-      <div class="schedule-item">
-        <h3>⚪ গ্রুপ ১: জেনারেল সার্ভিস (General Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। নিয়মিত রাইডে ইঞ্জিন অয়েলের লুব্রিকেশন ক্ষমতা কমে ও ফিল্টারে ময়লা জমে পিকআপ ও মাইলেজ ড্রপ করে। যা করা হয়: কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব ও টেনশন চেক।</p>
-      </div>
-      <div class="schedule-item">
-        <h3>🔴 গ্রুপ ২: মাস্টার সার্ভিস (Master Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। বিস্তারিত ইঞ্জিন ও পার্টস ক্লিনিং, নিখুঁত ট্যাপেট অ্যাডজাস্টমেন্ট ও ফুল বাইক ডায়াগনোসিস।</p>
-      </div>
-    </div>
-
-    <!-- ৪. শিক্ষণীয় রাইডার টিপস (Expert Tips) -->
-    <div class="content-box">
-      <div class="box-header"><i class="fa-solid fa-lightbulb"></i> রাইডারদের জন্য শিক্ষণীয় টিপস</div>
-      <div class="tips-list">
-        <div class="tips-item">
-          <i class="fa-solid fa-circle-check"></i>
-          <div>
-            <h4>ইঞ্জিন অয়েল নির্বাচন ও সঠিক মাপ</h4>
-            <p>আপনার বাইকের ম্যানুয়াল অনুযায়ী সঠিক গ্রেডের ইঞ্জিন অয়েল ব্যবহার করুন। অতিরিক্ত কম বা বেশি অয়েল ইঞ্জিনের ক্ষতি করে।</p>
-          </div>
-        </div>
-        <div class="tips-item">
-          <i class="fa-solid fa-circle-check"></i>
-          <div>
-            <h4>সঠিক টায়ার প্রেশার বজায় রাখা</h4>
-            <p>সপ্তাহে অন্তত একবার টায়ারের হাওয়া চেক করুন। সঠিক প্রেশার মাইলেজ বাড়ায় এবং দীর্ঘ রাইডে স্কিড করা থেকে রক্ষা করে।</p>
-          </div>
-        </div>
-        <div class="tips-item">
-          <i class="fa-solid fa-circle-check"></i>
-          <div>
-            <h4>ড্রাইভ চেইন মেইনটেন্যান্স</h4>
-            <p>প্রতি ৫০০-৭০০ কিমিতে ড্রাইভ চেইন পরিষ্কার করে ভালো মানের চেইন লুব ব্যবহার করুন। কখনো পোড়া মবিল দেবেন না।</p>
-          </div>
+    <!-- রাইডারদের জন্য শিক্ষণীয় টিপস -->
+    <div class="section-card">
+      <div class="section-title"><i class="fa-solid fa-lightbulb"></i> রাইডারদের জন্য শিক্ষণীয় টিপস</div>
+      <div class="tip-box">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+          <h4>ইঞ্জিন অয়েল নির্বাচন ও সঠিক গ্রেড</h4>
+          <p>বাইকের ম্যানুয়াল অনুযায়ী সঠিক গ্রেডের ইঞ্জিন অয়েল ব্যবহার করুন এবং সময়মতো ড্রেন দিন।</p>
         </div>
       </div>
-    </div>
-
-    <!-- ৫. কাজের ভিডিও (YouTube Video) -->
-    <div class="content-box">
-      <div class="box-header"><i class="fa-solid fa-video"></i> কাজের ভিডিও ও টিউটোরিয়াল</div>
-      <div class="video-wrapper">
-        <!-- এখানে আপনার যেকোনো ইউটিউব ভিডিওর Embed লিংক বসাতে পারেন -->
-        <iframe src="https://www.youtube.com/embed?listType=user_uploads" title="YouTube video player" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- ৬. কাস্টমারদের রিভিউ (Customer Reviews) -->
-    <div class="content-box">
-      <div class="box-header"><i class="fa-solid fa-star"></i> গ্রাহকদের মতামত ও রিভিউ</div>
-      <div class="review-grid">
-        <div class="review-card">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">"নয়ন ভাইয়ের কাজের হাত অসাধারণ। আমার বাইকের পিকআপ প্রবলেম অন্য কোথাও ঠিক করতে পারেনি, ভাই এক দেখায় সলভ করে দিয়েছেন।"</p>
-          <div class="reviewer-name">— তানভীর আহমেদ (FZ-S v2)</div>
+      <div class="tip-box">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+          <h4>সঠিক টায়ার প্রেশার বজায় রাখা</h4>
+          <p>সপ্তাহে অন্তত একবার টায়ারের হাওয়া চেক করুন। সঠিক প্রেশার মাইলেজ ও ব্যালান্স দুটোই ঠিক রাখে।</p>
         </div>
-        <div class="review-card">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">"২০ বছরের অভিজ্ঞতার প্রমাণ ওনার কাজে পাওয়া যায়। একদম নিখুঁত কাজ এবং কোনো অপ্রয়োজনীয় খরচ করান না।"</p>
-          <div class="reviewer-name">— রাশেদুল ইসলাম (RTR 4V)</div>
+      </div>
+      <div class="tip-box">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+          <h4>ড্রাইভ চেইন মেইনটেন্যান্স</h4>
+          <p>প্রতি ৫০০ কিমি পর চেইন পরিষ্কার করে চেইন লুব ব্যবহার করুন, পোড়া মবিল চেইনের আয়ু কমিয়ে দেয়।</p>
         </div>
       </div>
     </div>
 
-    <!-- ৭. কাজের ছবি গ্যালারি -->
-    <div class="content-box">
-      <div class="box-header"><i class="fa-solid fa-camera"></i> কাজের গ্যালারি</div>
+    <!-- কাজের ভিডিও -->
+    <div class="section-card">
+      <div class="section-title"><i class="fa-solid fa-video"></i> কাজের ভিডিও ও টিউটোরিয়াল</div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed?listType=user_uploads" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- কাস্টমারদের রিভিউ -->
+    <div class="section-card">
+      <div class="section-title"><i class="fa-solid fa-star"></i> গ্রাহকদের রিভিউ ও মতামত</div>
+      <div class="review-item">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"নয়ন ভাইয়ের কাজের হাত খুবই নিখুঁত। বাইকের পিকআপের ঝামেলা নিমেষেই সমাধান করে দিয়েছেন।"</p>
+        <div class="author">— তানভীর আহমেদ (বাইক রাইডার)</div>
+      </div>
+      <div class="review-item">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"২০ বছরের অভিজ্ঞতার সঠিক মূল্যায়ন পেয়েছি। কোনো অপ্রয়োজনীয় পার্টস বদলানোর পরামর্শ দেন না।"</p>
+        <div class="author">— রাশেদুল ইসলাম (বাইক ওনার)</div>
+      </div>
+    </div>
+
+    <!-- কাজের গ্যালারি -->
+    <div class="section-card">
+      <div class="section-title"><i class="fa-solid fa-camera"></i> রিসেন্ট কাজের ছবি</div>
       <div class="gallery-grid">
-        <div class="gallery-box"><img src="1.png" alt="Work 1" onerror="this.src='https://via.placeholder.com/400x300/111d33/38bdf8?text=Bike+Service'"></div>
-        <div class="gallery-box"><img src="2.png" alt="Work 2" onerror="this.src='https://via.placeholder.com/400x300/111d33/38bdf8?text=Engine+Tuning'"></div>
-        <div class="gallery-box"><img src="3.png" alt="Work 3" onerror="this.src='https://via.placeholder.com/400x300/111d33/38bdf8?text=Maintenance'"></div>
-        <div class="gallery-box"><img src="4.png" alt="Work 4" onerror="this.src='https://via.placeholder.com/400x300/111d33/38bdf8?text=FI+Cleaning'"></div>
+        <div class="gallery-item"><img src="1.png" alt="Work 1" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+1'"></div>
+        <div class="gallery-item"><img src="2.png" alt="Work 2" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+2'"></div>
+        <div class="gallery-item"><img src="3.png" alt="Work 3" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+3'"></div>
+        <div class="gallery-item"><img src="4.png" alt="Work 4" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Service+4'"></div>
       </div>
     </div>
 
