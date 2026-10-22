@@ -53,7 +53,7 @@
       object-fit: cover;
     }
 
-    /* ল্যাপটপ ও কম্পিউটারের জন্য বড় কনটেইনার */
+    /* বড় কনটেইনার */
     .container {
       max-width: 1200px;
       width: 94%;
@@ -104,7 +104,7 @@
       margin-top: 8px;
     }
 
-    /* সোশ্যাল লিংক বাটন: ল্যাপটপে পাশাপাশি গ্রিড */
+    /* সোশ্যাল লিংক গ্রিড */
     .links-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -152,33 +152,59 @@
       padding-bottom: 12px;
     }
 
-    /* ফর্ম ইনপুট লেআউট */
+    /* ফর্ম ইনপুট ও আইকন স্টাইল */
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
     .form-group {
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 0.94rem;
       color: #cbd5e1;
+      font-weight: 500;
+    }
+    .form-group label i {
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-wrapper i.field-icon {
+      position: absolute;
+      left: 14px;
+      color: #64748b;
+      font-size: 1rem;
+      pointer-events: none;
     }
     .form-control {
       width: 100%;
-      padding: 12px 14px;
+      padding: 12px 14px 12px 42px; /* বামপাশে আইকনের জন্য জায়গা */
       background: #090e17;
       border: 1px solid var(--card-border);
       border-radius: 8px;
       color: #fff;
       font-size: 0.95rem;
       outline: none;
+      transition: border-color 0.2s;
     }
     .form-control:focus {
       border-color: var(--primary);
+    }
+    textarea.form-control {
+      padding-left: 42px;
+    }
+    .textarea-wrapper i.field-icon {
+      top: 14px;
     }
     .btn-submit {
       width: 100%;
@@ -193,14 +219,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       transition: 0.2s;
     }
     .btn-submit:hover {
       background: #059669;
     }
 
-    /* সার্ভিস শিডিউল: ল্যাপটপে পাশাপাশি ২টি বক্স */
+    /* সার্ভিস শিডিউল */
     .schedule-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -227,7 +253,7 @@
       font-size: 0.88rem;
     }
 
-    /* ২০টি টিপস: ল্যাপটপে পাশাপাশি ২টি কলাম */
+    /* ২০টি টিপস (২ কলাম) */
     .tips-grid-2col {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -272,7 +298,7 @@
       margin-top: 4px;
     }
 
-    /* ভিডিও প্লেয়ার */
+    /* ভিডিও */
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -290,7 +316,7 @@
       border: none;
     }
 
-    /* কাস্টমার রিভিউ: ল্যাপটপে ৩ কলামে ছড়িয়ে থাকবে */
+    /* কাস্টমার রিভিউ গ্রিড */
     .review-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -355,7 +381,7 @@
       color: #090e17;
     }
 
-    /* ৮টি ছবির গ্যালারি: ল্যাপটপে ৪টি করে কলাম */
+    /* গ্যালারি */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -379,7 +405,7 @@
       transform: scale(1.06);
     }
 
-    /* About Me পরিচিতি */
+    /* About Me */
     .about-me-card {
       display: flex;
       gap: 25px;
@@ -421,7 +447,7 @@
       color: var(--text-muted);
     }
 
-    /* মোবাইলের জন্য অপ্টিমাইজেশন (Responsive Mobile View) */
+    /* রেসপনসিভ মোবাইল ভিউ */
     @media (max-width: 850px) {
       .container {
         width: 100%;
@@ -473,7 +499,7 @@
       <div class="exp-badge">⚡ 20+ Years of Experience | ২০+ বছরের বাস্তব ও বিশ্বস্ত অভিজ্ঞতা</div>
     </div>
 
-    <!-- ৩. সোশ্যাল লিংক বাটনসমূহ (ল্যাপটপে ওয়াইড গ্রিড) -->
+    <!-- ৩. সোশ্যাল লিংক বাটনসমূহ -->
     <div class="links-grid">
       <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel | ইউটিউব চ্যানেল</a>
       <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page | ফেসবুক পেজ</a>
@@ -483,27 +509,53 @@
       <a href="tel:01675884401" class="link-item" style="border-color: var(--green);"><i class="fa-solid fa-phone" style="color: var(--green);"></i> Call Now: 01675884401 | সরাসরি কল করুন</a>
     </div>
 
-    <!-- ৪. সার্ভিস বুকিং ও সিরিয়াল ফর্ম -->
+    <!-- ৪. সার্ভিস বুকিং ও সিরিয়াল ফর্ম (আইকন এবং জেন্ডার অপশন সহ) -->
     <div class="section-card" id="booking" style="border: 2px solid var(--green);">
       <div class="section-title" style="color: var(--green);"><i class="fa-solid fa-calendar-check"></i> সার্ভিস সিরিয়াল ও বুকিং | Book Service Serial</div>
       <form onsubmit="handleBooking(event)">
+        
         <div class="form-row">
           <div class="form-group">
-            <label>আপনার নাম | Full Name:</label>
-            <input type="text" id="b_name" class="form-control" placeholder="उदा: Tanvir Ahmed" required>
+            <label><i class="fa-solid fa-user"></i> আপনার নাম | Full Name:</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user-pen field-icon"></i>
+              <input type="text" id="b_name" class="form-control" placeholder="उदा: Tanvir Ahmed" required>
+            </div>
           </div>
           <div class="form-group">
-            <label>ফোন নাম্বার | Phone Number:</label>
-            <input type="tel" id="b_phone" class="form-control" placeholder="017xxxxxxxx" required>
+            <label><i class="fa-solid fa-phone"></i> ফোন নাম্বার | Phone Number:</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-mobile-screen-button field-icon"></i>
+              <input type="tel" id="b_phone" class="form-control" placeholder="017xxxxxxxx" required>
+            </div>
           </div>
         </div>
+
         <div class="form-row">
           <div class="form-group">
-            <label>বাইকের মডেল | Bike Model:</label>
-            <input type="text" id="b_model" class="form-control" placeholder="उदा: TVS RTR 4V / Yamaha FZ-S" required>
+            <label><i class="fa-solid fa-venus-mars"></i> জেন্ডার | Gender:</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-person-half-dress field-icon"></i>
+              <select id="b_gender" class="form-control">
+                <option value="Male">পুরুষ | Male</option>
+                <option value="Female">নারী | Female</option>
+                <option value="Other">অন্যান্য | Other</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
-            <label>সার্ভিসের ধরন | Service Type:</label>
+            <label><i class="fa-solid fa-motorcycle"></i> বাইকের মডেল | Bike Model:</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-gauge-high field-icon"></i>
+              <input type="text" id="b_model" class="form-control" placeholder="उदा: TVS RTR 4V / Yamaha FZ-S" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fa-solid fa-wrench"></i> সার্ভিসের ধরন | Service Type:</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-toolbox field-icon"></i>
             <select id="b_type" class="form-control">
               <option value="General Service">জেনারেল সার্ভিস | General Service</option>
               <option value="Master Service">মাস্টার সার্ভিস | Master Service</option>
@@ -513,15 +565,20 @@
             </select>
           </div>
         </div>
+
         <div class="form-group">
-          <label>সমস্যা বা পছন্দের তারিখ | Issue Details / Preferred Date:</label>
-          <textarea id="b_msg" class="form-control" rows="2" placeholder="কবে আসতে চান বা বাইকে কী সমস্যা হচ্ছে লিখুন..."></textarea>
+          <label><i class="fa-solid fa-calendar-days"></i> সমস্যা বা পছন্দের তারিখ | Preferred Date / Issue Details:</label>
+          <div class="input-wrapper textarea-wrapper">
+            <i class="fa-solid fa-pen-clip field-icon"></i>
+            <textarea id="b_msg" class="form-control" rows="2" placeholder="কবে আসতে চান বা বাইকে কী সমস্যা হচ্ছে সংক্ষেপে লিখুন..."></textarea>
+          </div>
         </div>
+
         <button type="submit" class="btn-submit"><i class="fa-brands fa-whatsapp"></i> সিরিয়াল বুক করুন (WhatsApp Serial)</button>
       </form>
     </div>
 
-    <!-- ৫. প্রো সার্ভিস শিডিউল (ল্যাপটপে পাশাপাশি ২টি কার্ড) -->
+    <!-- ৫. প্রো সার্ভিস শিডিউল -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল | Pro Service Schedule & Guide</div>
       <div class="schedule-grid">
@@ -538,7 +595,7 @@
       </div>
     </div>
 
-    <!-- ৬. ২০টি রাইডার সার্ভিস টিপস (২ কলামে ল্যাপটপ জুড়ে) -->
+    <!-- ৬. ২০টি রাইডার সার্ভিস টিপস -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-lightbulb"></i> ২০টি শিক্ষণীয় বাইক সার্ভিস টিপস | 20 Pro Rider Maintenance Tips</div>
       <div class="tips-grid-2col">
@@ -734,11 +791,11 @@
       </div>
     </div>
 
-    <!-- ৮. ১০ জন কাস্টমারের রিভিউ (ল্যাপটপে ৩ কলাম গ্রিড) -->
+    <!-- ৮. ১০ জন কাস্টমারের রিভিউ ও ফিডব্যাক ফর্ম -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-star"></i> গ্রাহকদের রিভিউ ও মূল্যায়ন | Customer Reviews & Feedback</div>
       
-      <!-- প্রথম ৩টি রিভিউ সামনে থাকবে -->
+      <!-- প্রথম ৩টি রিভিউ -->
       <div class="review-grid">
         <div class="review-item">
           <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -762,7 +819,7 @@
         </div>
       </div>
 
-      <!-- বাকি ৭টি রিভিউ (ড্রপডাউনের ভেতরে ৩ কলামে) -->
+      <!-- বাকি ৭টি রিভিউ -->
       <div class="hidden-reviews" id="moreReviews">
         <div class="review-item">
           <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -819,32 +876,62 @@
         <i class="fa-solid fa-chevron-down"></i> আরও ৭টি কাস্টমার রিভিউ দেখুন | Show All 10 Reviews
       </button>
 
-      <!-- কাস্টমার রিভিউ দেওয়ার ফর্ম -->
+      <!-- কাস্টমার ফিডব্যাক ফর্ম (আইকন এবং জেন্ডার অপশন সহ) -->
       <div style="background: rgba(9, 14, 23, 0.7); border: 2px dashed var(--accent); padding: 22px; border-radius: 12px; margin-top: 20px;">
-        <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 14px;"><i class="fa-solid fa-pen-to-square"></i> আপনার মতামত বা রিভিউ দিন | Submit Your Review</h3>
+        <h3 style="color: var(--accent); font-size: 1.15rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-pen-to-square"></i> আপনার মতামত বা রিভিউ দিন | Submit Your Review
+        </h3>
         <form onsubmit="handleReview(event)">
+          
           <div class="form-row">
             <div class="form-group">
-              <input type="text" id="r_name" class="form-control" placeholder="আপনার নাম ও বাইকের মডেল (Name & Bike Model)" required>
+              <label><i class="fa-solid fa-user-tag"></i> আপনার নাম ও বাইকের মডেল | Name & Bike:</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-id-card field-icon"></i>
+                <input type="text" id="r_name" class="form-control" placeholder="उदा: Tanvir (FZ-S v2)" required>
+              </div>
             </div>
+            
             <div class="form-group">
+              <label><i class="fa-solid fa-venus-mars"></i> জেন্ডার | Gender:</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-person-half-dress field-icon"></i>
+                <select id="r_gender" class="form-control">
+                  <option value="Male">পুরুষ | Male</option>
+                  <option value="Female">নারী | Female</option>
+                  <option value="Other">অন্যান্য | Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-star-half-stroke"></i> রেটিং নির্বাচন করুন | Select Rating:</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-star field-icon" style="color: #fbbf24;"></i>
               <select id="r_star" class="form-control">
-                <option value="⭐⭐⭐⭐⭐ (৫ স্টার)">⭐⭐⭐⭐⭐ (5 Stars - চমৎকার)</option>
-                <option value="⭐⭐⭐⭐ (৪ স্টার)">⭐⭐⭐⭐ (4 Stars - ভালো)</option>
-                <option value="⭐⭐⭐ (৩ স্টার)">⭐⭐⭐ (3 Stars - সন্তোষজনক)</option>
+                <option value="⭐⭐⭐⭐⭐ (৫ স্টার)">⭐⭐⭐⭐⭐ (5 Stars - চমৎকার / Excellent)</option>
+                <option value="⭐⭐⭐⭐ (৪ স্টার)">⭐⭐⭐⭐ (4 Stars - ভালো / Good)</option>
+                <option value="⭐⭐⭐ (৩ স্টার)">⭐⭐⭐ (3 Stars - সন্তোষজনক / Average)</option>
               </select>
             </div>
           </div>
+
           <div class="form-group">
-            <textarea id="r_msg" class="form-control" rows="2" placeholder="কাজের অভিজ্ঞতা সম্পর্কে আপনার মূল্যবান মন্তব্য লিখুন..." required></textarea>
+            <label><i class="fa-solid fa-comment-dots"></i> আপনার মূল্যবান মন্তব্য | Feedback & Comments:</label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="fa-solid fa-message field-icon"></i>
+              <textarea id="r_msg" class="form-control" rows="2" placeholder="সার্ভিস বা কাজের অভিজ্ঞতা কেমন ছিল লিখুন..." required></textarea>
+            </div>
           </div>
+
           <button type="submit" class="btn-submit" style="background: var(--accent);"><i class="fa-solid fa-paper-plane"></i> রিভিউ পোস্ট করুন (Send Review)</button>
         </form>
       </div>
 
     </div>
 
-    <!-- ৯. ৮টি কাজের ফটো গ্যালারি (ল্যাপটপে ৪টি কলাম) -->
+    <!-- ৯. ৮টি কাজের ফটো গ্যালারি -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-camera"></i> কাজের ফটো গ্যালারি | Recent Works Gallery (8 Photos)</div>
       <div class="gallery-grid">
@@ -876,7 +963,6 @@
     function toggleReviews() {
       const more = document.getElementById('moreReviews');
       const btn = document.getElementById('toggleReviewBtn');
-      // ল্যাপটপ বা মোবাইলের স্ক্রিন অনুযায়ী ডিসপ্লে মোড নির্ধারণ
       const displayType = window.innerWidth > 850 ? 'grid' : 'flex';
       
       if (more.style.display === 'grid' || more.style.display === 'flex') {
@@ -892,21 +978,23 @@
       e.preventDefault();
       const name = document.getElementById('b_name').value;
       const phone = document.getElementById('b_phone').value;
+      const gender = document.getElementById('b_gender').value;
       const model = document.getElementById('b_model').value;
       const type = document.getElementById('b_type').value;
       const msg = document.getElementById('b_msg').value;
 
-      const text = `*New Service Booking - NayanTorqx*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Bike:* ${model}%0A*Service:* ${type}%0A*Note:* ${msg}`;
+      const text = `*New Service Booking - NayanTorqx*%0A*Name:* ${name}%0A*Gender:* ${gender}%0A*Phone:* ${phone}%0A*Bike:* ${model}%0A*Service:* ${type}%0A*Note:* ${msg}`;
       window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
     }
 
     function handleReview(e) {
       e.preventDefault();
       const name = document.getElementById('r_name').value;
+      const gender = document.getElementById('r_gender').value;
       const star = document.getElementById('r_star').value;
       const msg = document.getElementById('r_msg').value;
 
-      const text = `*New Customer Review - NayanTorqx*%0A*From:* ${name}%0A*Rating:* ${star}%0A*Review:* ${msg}`;
+      const text = `*New Customer Review - NayanTorqx*%0A*From:* ${name}%0A*Gender:* ${gender}%0A*Rating:* ${star}%0A*Review:* ${msg}`;
       window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
       alert('আপনার মূল্যবান মতামতের জন্য ধন্যবাদ! রিভিউটি আমাদের কাছে পাঠানো হয়েছে।');
       e.target.reset();
