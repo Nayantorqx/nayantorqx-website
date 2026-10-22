@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nayan Torq X | Professional Motorcycle Service & Expert Tips</title>
+  <title>Nayan Torq X | Professional Motorcycle Service & Maintenance Hub</title>
   
-  <!-- Google Fonts & Font Awesome Icons -->
+  <!-- ফন্ট এবং ফন্টঅসাম আইকন লিংক -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --bg: #0b1120;
-      --card-bg: #1e293b;
-      --card-border: #334155;
+      --bg: #090e17;
+      --card-bg: #131c2e;
+      --card-border: #1f2d47;
       --primary: #38bdf8;
       --accent: #f97316;
       --green: #10b981;
-      --text: #f8fafc;
+      --text: #f1f5f9;
       --text-muted: #94a3b8;
     }
 
@@ -34,14 +34,14 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding-bottom: 70px;
+      padding-bottom: 80px;
     }
 
     /* ব্যানার */
     .banner {
       width: 100%;
-      height: 220px;
-      background: linear-gradient(135deg, #091224 0%, #1e293b 100%);
+      height: 230px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -55,25 +55,25 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto;
       padding: 0 16px;
     }
 
-    /* লোগো ও হেডার পরিচিতি */
+    /* লোগো ও হেডার */
     .profile-area {
       text-align: center;
       margin-top: -65px;
       margin-bottom: 25px;
     }
-    .logo-img {
+    .avatar-logo {
       width: 130px;
       height: 130px;
       border-radius: 50%;
       border: 4px solid var(--primary);
       background-color: var(--card-bg);
       object-fit: cover;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
     }
     .profile-area h1 {
       font-size: 2.2rem;
@@ -94,9 +94,9 @@
       padding: 4px 14px;
       border-radius: 20px;
       font-size: 0.9rem;
-      margin-top: 6px;
+      margin-top: 8px;
     }
-    .exp-text {
+    .exp-badge {
       color: var(--green);
       font-weight: 600;
       font-size: 1.02rem;
@@ -108,14 +108,14 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
     .link-item {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: #1e293b;
+      background: var(--card-bg);
       color: #fff;
       text-decoration: none;
       padding: 12px 20px;
@@ -137,8 +137,8 @@
       border: 1px solid var(--card-border);
       border-radius: 14px;
       padding: 22px;
-      margin-bottom: 22px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
     }
     .section-title {
       font-size: 1.25rem;
@@ -146,14 +146,14 @@
       margin-bottom: 16px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       border-bottom: 1px solid var(--card-border);
       padding-bottom: 10px;
     }
 
     /* সার্ভিস শিডিউল */
     .schedule-box {
-      background: rgba(11, 17, 32, 0.6);
+      background: rgba(9, 14, 23, 0.6);
       border-left: 4px solid var(--primary);
       padding: 14px;
       border-radius: 8px;
@@ -166,7 +166,7 @@
     }
     .schedule-box p {
       font-size: 0.92rem;
-      color: var(--text-muted);
+      color: #e2e8f0;
       margin-bottom: 4px;
     }
     .schedule-box .en-text {
@@ -174,21 +174,34 @@
       font-size: 0.88rem;
     }
 
-    /* টিপস */
+    /* ২০টি সার্ভিস টিপস */
+    .tips-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
     .tip-box {
-      background: rgba(11, 17, 32, 0.6);
+      background: rgba(9, 14, 23, 0.6);
       border: 1px solid var(--card-border);
       padding: 12px 14px;
       border-radius: 8px;
-      margin-bottom: 10px;
       display: flex;
       gap: 12px;
       align-items: flex-start;
     }
-    .tip-box i {
-      color: var(--accent);
-      font-size: 1.2rem;
-      margin-top: 3px;
+    .tip-num {
+      background: var(--accent);
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
     .tip-box h4 {
       font-size: 1rem;
@@ -197,15 +210,15 @@
     }
     .tip-box p {
       font-size: 0.9rem;
-      color: var(--text-muted);
+      color: #cbd5e1;
     }
     .tip-box .en-tip {
       color: #94a3b8;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       margin-top: 2px;
     }
 
-    /* ভিডিও */
+    /* ভিডিও প্লেয়ার */
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -223,13 +236,17 @@
       border: none;
     }
 
-    /* কাস্টমার রিভিউ */
+    /* ১০ জন কাস্টমার রিভিউ গ্রিড */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 14px;
+    }
     .review-item {
-      background: rgba(11, 17, 32, 0.6);
+      background: rgba(9, 14, 23, 0.6);
       border: 1px solid var(--card-border);
       border-radius: 10px;
       padding: 14px;
-      margin-bottom: 12px;
     }
     .stars {
       color: #fbbf24;
@@ -238,12 +255,12 @@
     }
     .review-item p {
       font-size: 0.92rem;
-      color: #cbd5e1;
+      color: #e2e8f0;
       font-style: italic;
       margin-bottom: 4px;
     }
     .review-item .en-review {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--text-muted);
       margin-bottom: 6px;
     }
@@ -253,16 +270,40 @@
       font-weight: 600;
     }
 
-    /* সবার নিচে পরিচিতি ও ছবি (About Me) */
+    /* ৮টি ছবির গ্যালারি গ্রিড */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .gallery-item {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      aspect-ratio: 4/3;
+      background: #000;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.06);
+    }
+
+    /* সবার নিচে বায়ো পরিচিতি (About Me) */
     .about-me-card {
       display: flex;
       gap: 20px;
       align-items: center;
-      background: linear-gradient(145deg, #1e293b, #0f172a);
+      background: linear-gradient(145deg, #131c2e, #090e17);
       border: 2px solid var(--primary);
       border-radius: 16px;
       padding: 24px;
-      margin-top: 30px;
+      margin-top: 25px;
     }
     .my-photo {
       width: 140px;
@@ -304,12 +345,15 @@
         width: 120px;
         height: 120px;
       }
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ১. ব্যানার ছবি (banner.png) -->
+  <!-- ১. কভার ব্যানার (banner.png) -->
   <div class="banner">
     <img src="banner.png" alt="NayanTorqx Banner" onerror="this.style.display='none'">
   </div>
@@ -317,99 +361,335 @@
   <div class="container">
     <!-- ২. লোগো ও হেডার টাইটেল -->
     <div class="profile-area">
-      <img src="logo.png" alt="NayanTorqx Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/130/1e293b/38bdf8?text=NT+Logo'">
+      <img src="logo.png" alt="NayanTorqx Logo" class="avatar-logo" onerror="this.src='https://via.placeholder.com/130/131c2e/38bdf8?text=NT+Logo'">
       <h1>Nayan Torq X</h1>
-      <div class="tagline">Bike Expert Service Center | মোটরসাইকেল বিশেষজ্ঞ সেবা</div>
-      <div class="location"><i class="fa-solid fa-location-dot"></i> Tejgaon Industrial Area, Dhaka</div>
-      <div class="exp-text">⚡ 20+ Years Experience | ২০+ বছরের বিশ্বস্ত অভিজ্ঞতা</div>
+      <div class="tagline">Bike Expert Service Center | মোটরসাইকেল বিশেষজ্ঞ সেবা কেন্দ্র</div>
+      <div class="location"><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh | ঢাকা, বাংলাদেশ</div>
+      <div class="exp-badge">⚡ 20+ Years of Experience | ২০+ বছরের বাস্তব ও বিশ্বস্ত অভিজ্ঞতা</div>
     </div>
 
-    <!-- ৩. সোশ্যাল মিডিয়া ও কন্টাক্ট লিংক -->
+    <!-- ৩. সোশ্যাল মিডিয়া ও কন্টাক্ট লিংক (Bilingual) -->
     <div class="links-grid">
-      <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel (সাবস্ক্রাইব করুন)</a>
-      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page (লাইক ও ফলো করুন)</a>
-      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-solid fa-user" style="color: #38bdf8;"></i> Facebook Profile</a>
-      <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram Profile</a>
-      <a href="https://tiktok.com" target="_blank" class="link-item"><i class="fa-brands fa-tiktok"></i> TikTok Profile</a>
+      <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel | ইউটিউব চ্যানেল (ভিডিও টিউটোরিয়াল)</a>
+      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page | ফেসবুক পেজ (লাইক ও ফলো)</a>
+      <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-solid fa-user" style="color: #38bdf8;"></i> Facebook Profile | ফেসবুক প্রোফাইল</a>
+      <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram Profile | ইনস্টাগ্রাম</a>
+      <a href="https://tiktok.com" target="_blank" class="link-item"><i class="fa-brands fa-tiktok"></i> TikTok Profile | টিকটক প্রোফাইল</a>
+      <a href="tel:01675884401" class="link-item" style="border-color: var(--green);"><i class="fa-solid fa-phone" style="color: var(--green);"></i> Call Now: 01675884401 | সরাসরি কল করুন</a>
     </div>
 
-    <!-- ৪. প্রো সার্ভিস শিডিউল (বাংলা ও ইংলিশ) -->
+    <!-- ৪. প্রো সার্ভিস শিডিউল (১০০% বাংলা ও ইংলিশ) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল | Service Guide</div>
+      <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল | Pro Service Schedule & Guide</div>
       <div class="schedule-box">
         <h3>⚪ জেনারেল সার্ভিস (General Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব।</p>
-        <p class="en-text"><strong>Interval:</strong> Every 2,500 - 3,000 km. Includes Carburetor/FI cleaning, spark plug check, air filter clean, clutch/brake adjustment & chain maintenance.</p>
+        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। নিয়মিত রাইডে ইঞ্জিন অয়েলের কার্যক্ষমতা কমে ও ফিল্টারে ময়লা জমে। যা করা হয়: কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব ও টেনশন চেক।</p>
+        <p class="en-text"><strong>Interval:</strong> Every 2,500 - 3,000 km. Regular riding degrades oil lubrication and clogs filters. Includes: Carburetor/FI cleaning, spark plug check, air filter cleaning, clutch/brake free-play adjustment, and drive chain lubrication & tension check.</p>
       </div>
       <div class="schedule-box">
         <h3>🔴 মাস্টার সার্ভিস (Master Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। বিস্তারিত ইঞ্জিন ও পার্টস ক্লিনিং, ট্যাপেট অ্যাডজাস্টমেন্ট ও ফুল বাইক ডায়াগনোসিস।</p>
-        <p class="en-text"><strong>Interval:</strong> Every 8,000 - 10,000 km. Complete engine tuning, tappet adjustment, deep parts cleaning & comprehensive checkup.</p>
+        <p><strong>সঠিক সময়:</strong> প্রতি ৮,০০০ - ১০,০০০ কিমি পর পর। বিস্তারিত ইঞ্জিন ও পার্টস ক্লিনিং, নিখুঁত ট্যাপেট অ্যাডজাস্টমেন্ট, ইলেকট্রিক্যাল হেলথ চেক এবং ফুল বাইক ডায়াগনোসিস।</p>
+        <p class="en-text"><strong>Interval:</strong> Every 8,000 - 10,000 km. Deep parts overhaul, ultrasonic cleaning, precise valve/tappet clearance adjustment, electrical system test, and complete motorcycle diagnostics.</p>
       </div>
     </div>
 
-    <!-- ৫. শিক্ষণীয় রাইডার টিপস (বাংলা ও ইংলিশ) -->
+    <!-- ৫. ২০টি রাইডার সার্ভিস টিপস (১০০% বাংলা ও ইংরেজি) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-lightbulb"></i> রাইডারদের জন্য টিপস | Rider Tips</div>
-      <div class="tip-box">
-        <i class="fa-solid fa-circle-check"></i>
-        <div>
-          <h4>ইঞ্জিন অয়েল ও সঠিক গ্রেড | Engine Oil Grade</h4>
-          <p>বাইকের ম্যানুয়াল অনুযায়ী সঠিক গ্রেডের ইঞ্জিন অয়েল ব্যবহার করুন এবং সময়মতো ড্রেন দিন।</p>
-          <p class="en-tip">Always use manufacturer-recommended engine oil grade and change it on schedule.</p>
+      <div class="section-title"><i class="fa-solid fa-lightbulb"></i> ২০টি শিক্ষণীয় বাইক সার্ভিস টিপস | 20 Pro Rider Maintenance Tips</div>
+      <div class="tips-list">
+
+        <div class="tip-box">
+          <div class="tip-num">১</div>
+          <div>
+            <h4>ইঞ্জিন অয়েল নির্বাচন ও পরিবর্তন | Engine Oil Grade & Drain</h4>
+            <p>বাইকের ম্যানুয়াল দেখে নির্দিষ্ট গ্রেডের ইঞ্জিন অয়েল ব্যবহার করুন এবং সময়মতো ড্রেন দিন।</p>
+            <p class="en-tip">Always use manufacturer-recommended engine oil grade and change it strictly on schedule.</p>
+          </div>
         </div>
-      </div>
-      <div class="tip-box">
-        <i class="fa-solid fa-circle-check"></i>
-        <div>
-          <h4>টায়ার প্রেশার বজায় রাখা | Tyre Pressure</h4>
-          <p>নিয়মিত টায়ারের হাওয়া চেক করুন। সঠিক প্রেশার মাইলেজ ও ব্যালান্স দুটোই ঠিক রাখে।</p>
-          <p class="en-tip">Maintain proper tyre pressure weekly for better fuel economy and riding safety.</p>
+
+        <div class="tip-box">
+          <div class="tip-num">২</div>
+          <div>
+            <h4>টায়ার প্রেশার বজায় রাখা | Tyre Pressure Maintenance</h4>
+            <p>সপ্তাহে অন্তত একবার টায়ারের হাওয়া চেক করুন। সঠিক প্রেশার মাইলেজ ও ব্যালান্স বজায় রাখে।</p>
+            <p class="en-tip">Check tyre pressure weekly to maintain proper road grip, stability, and fuel economy.</p>
+          </div>
         </div>
-      </div>
-      <div class="tip-box">
-        <i class="fa-solid fa-circle-check"></i>
-        <div>
-          <h4>ড্রাইভ চেইন যত্ন | Chain Maintenance</h4>
-          <p>প্রতি ৫০০ কিমিতে চেইন লুব করুন। পোড়া মবিল কখনো চেইনে দেবেন না।</p>
-          <p class="en-tip">Clean and lubricate the drive chain every 500 km. Avoid using used engine oil.</p>
+
+        <div class="tip-box">
+          <div class="tip-num">৩</div>
+          <div>
+            <h4>ড্রাইভ চেইন লুব্রিকেশন | Drive Chain Care</h4>
+            <p>প্রতি ৫০০ কিমিতে চেইন পরিষ্কার করে চেইন লুব দিন। ভুলেও পোড়া মবিল চেইনে ব্যবহার করবেন না।</p>
+            <p class="en-tip">Clean and lubricate the drive chain every 500 km. Never use burnt waste engine oil.</p>
+          </div>
         </div>
+
+        <div class="tip-box">
+          <div class="tip-num">৪</div>
+          <div>
+            <h4>স্পার্ক প্লাগ ক্লিনিং | Spark Plug Gap & Carbon</h4>
+            <p>প্রতি ৩,০০০ কিমিতে স্পার্ক প্লাগের কার্বন পরিষ্কার করুন ও ০.৭-০.৮ মিমি গ্যাপ বজায় রাখুন।</p>
+            <p class="en-tip">Clean carbon deposits every 3,000 km and inspect standard electrode clearance.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">৫</div>
+          <div>
+            <h4>এয়ার ফিল্টার পরিচ্ছন্নতা | Air Filter Service</h4>
+            <p>ফোম ফিল্টার হলে ধুয়ে শুকিয়ে তেল দিন, পেপার ফিল্টার হলে নির্ধারিত সময়ে পরিবর্তন করুন।</p>
+            <p class="en-tip">Wash and re-oil foam filters regularly; replace dry paper filters once clogged.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">৬</div>
+          <div>
+            <h4>ক্লাচ ক্যাবল ও ফ্রি-প্লে | Clutch Cable Free-Play</h4>
+            <p>ক্লাচ লিভারে ১০-১৫ মিমি ফ্রি-প্লে রাখুন। অতিরিক্ত টাইট থাকলে ক্লাচ প্লেট দ্রুত পুড়ে যায়।</p>
+            <p class="en-tip">Maintain 10-15 mm clutch lever free-play to prevent premature clutch friction wear.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">৭</div>
+          <div>
+            <h4>ব্রেক প্যাড ও শু মনিটরিং | Brake Pad & Shoe Inspection</h4>
+            <p>ব্রেক প্যাডের খাঁজ শেষ হওয়ার আগেই বদলে ফেলুন, নইলে ডিস্ক প্লেট নষ্ট হয়ে যাবে।</p>
+            <p class="en-tip">Replace brake pads before wear indicators vanish to avoid scoring the disc rotor.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">৮</div>
+          <div>
+            <h4>ব্যাটারি ভোল্টেজ ও টার্মিনাল | Battery Health & Terminals</h4>
+            <p>টার্মিনালে সাদা লবণ জমতে দেবেন না। গরম পানি দিয়ে পরিষ্কার করে পেট্রোলিয়াম জেলি মেখে রাখুন।</p>
+            <p class="en-tip">Keep terminals free of corrosion and coat them with petroleum jelly or grease.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">৯</div>
+          <div>
+            <h4>কার্বুরেটর ও এফআই টিউনিং | Carburetor / FI Tuning</h4>
+            <p>ইঞ্জিন কোল্ড অবস্থায় টিউনিং করবেন না। ইঞ্জিন পর্যাপ্ত গরম হলে এয়ার-ফুয়েল মিক্সচার অ্যাডজাস্ট করুন।</p>
+            <p class="en-tip">Never tune on a cold engine; warm up properly before adjusting air-fuel mixture.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১০</div>
+          <div>
+            <h4>ট্যাপেট ক্লিয়ারেন্স পরিমাপ | Valve / Tappet Clearance</h4>
+            <p>ইঞ্জিন ঠান্ডা অবস্থায় ফিলর গজ ব্যবহার করে নিখুঁত ট্যাপেট ক্লিয়ারেন্স সেট করুন।</p>
+            <p class="en-tip">Set tappet clearances strictly on a cold engine using precise feeler gauges.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১১</div>
+          <div>
+            <h4>ইঞ্জিন কোল্ড স্টার্ট নিয়ম | Cold Start Warm-Up</h4>
+            <p>সকালে স্টার্ট দেওয়ার পর সাথে সাথে এক্সিলারেটর টানবেন না; অন্তত ৩০ সেকেন্ড আইডল রাখুন।</p>
+            <p class="en-tip">Allow the engine to idle for 30-60 seconds on cold start to let engine oil circulate.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১২</div>
+          <div>
+            <h4>ব্রেক ফ্লুইড পরিবর্তন | Brake Fluid Flush</h4>
+            <p>প্রতি দেড় থেকে দুই বছরে ব্রেক ফ্লুইড (DOT3 / DOT4) সম্পূর্ণ পরিবর্তন করা উচিত।</p>
+            <p class="en-tip">Flush and replace hydraulic brake fluid every 1.5 to 2 years to prevent brake fade.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১৩</div>
+          <div>
+            <h4>ফ্রন্ট ফর্ক সাসপেনশন | Front Fork Seal & Oil</h4>
+            <p>সাসপেনশনে তেল চুইয়ে পড়লে সাথে সাথে ফর্ক অয়েল সিল পরিবর্তন করে নতুন ফর্ক অয়েল দিন।</p>
+            <p class="en-tip">Replace damaged fork seals immediately to maintain stability and prevent oil leaks.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১৪</div>
+          <div>
+            <h4>হুইল ও স্প্রকেট বেয়ারিং | Wheel & Sprocket Bearings</h4>
+            <p>চাকা জ্যাম মনে হলে বা অস্বাভাবিক শব্দ হলে বেয়ারিং চেক করুন ও প্রয়োজনে গ্রিজ দিন।</p>
+            <p class="en-tip">Check wheel bearings regularly for smooth movement and re-grease as required.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১৫</div>
+          <div>
+            <h4>কুল্যান্ট লেভেল চেক | Coolant Level Inspection</h4>
+            <p>কুল্যান্ট লেভেল রিজার্ভারের 'MIN' দাগের নিচে নামতে দেবেন না। কখনো সাধারণ ট্যাপের পানি দেবেন না।</p>
+            <p class="en-tip">Keep coolant level between MIN and MAX. Never top up with regular tap water.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১৬</div>
+          <div>
+            <h4>ফুয়েল ফিল্টার পরিচ্ছন্নতা | Fuel Strainer & Filter</h4>
+            <p>তেলের লাইনে ময়লা জমলে বাইক ঝটকা মারে; নিয়মিত ফুয়েল ছাঁকনি ও ফিল্টার পরিষ্কার রাখুন।</p>
+            <p class="en-tip">Clean or replace fuel strainers periodically to ensure uninterrupted fuel flow.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১৭</div>
+          <div>
+            <h4>স্টিয়ারিং কোন সেট ব্যালান্স | Steering Cone Set Check</h4>
+            <p>ব্রেক চাপলে হ্যান্ডেলবারে খটখট শব্দ হলে স্টিয়ারিং কোন সেট অ্যাডজাস্ট বা গ্রিজ করুন।</p>
+            <p class="en-tip">Inspect steering races and lubricate ball bearings if steering binds or wobbles.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১৮</div>
+          <div>
+            <h4>বৃষ্টিতে বাইক ধোয়া | Monsoon Wash & Lubrication</h4>
+            <p>বৃষ্টির পানিতে ভিজে আসার পর বাইক সাধারণ পানিতে ধুয়ে ধাতব লিভার ও জয়েন্টে লুব্রিকেন্ট দিন।</p>
+            <p class="en-tip">Wash off corrosive road grime after rain and apply lubrication to all pivot points.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">১৯</div>
+          <div>
+            <h4>ইলেক্ট্রিক্যাল ওয়্যারিং সুরক্ষা | Electrical Harness Safety</h4>
+            <p>অতিরিক্ত হর্ন বা লাইটের জন্য মূল তার না কেটে আলাদা রিলে ও ফিউজ সংযোগ ব্যবহার করুন।</p>
+            <p class="en-tip">Install auxiliary lights or horns using separate relays and fuses without cutting stock wiring.</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-num">২০</div>
+          <div>
+            <h4>সঠিক এক্সিলারেটর ও গিয়ার শিফট | Smooth Gear Shifting</h4>
+            <p>কম গতিতে বড় গিয়ারে টানবেন না (ইঞ্জিন নকিং এড়িয়ে চলুন); সময়মতো ডাউনশিফট করুন।</p>
+            <p class="en-tip">Avoid engine lugging at low speeds by downshifting smoothly and promptly.</p>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- ৬. কাজের ভিডিও (YouTube Video) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-video"></i> কাজের ভিডিও | Latest Work Video</div>
+      <div class="section-title"><i class="fa-solid fa-video"></i> কাজের ভিডিও ও টিউটোরিয়াল | Work Video & Tutorials</div>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed?listType=user_uploads" allowfullscreen></iframe>
       </div>
     </div>
 
-    <!-- ৭. কাস্টমার রিভিউ (বাংলা ও ইংলিশ) -->
+    <!-- ৭. ১০ জন কাস্টমারের রিভিউ (১০০% বাংলা ও ইংরেজি) -->
     <div class="section-card">
-      <div class="section-title"><i class="fa-solid fa-star"></i> কাস্টমার রিভিউ | Customer Reviews</div>
-      <div class="review-item">
-        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p>"নয়ন ভাইয়ের কাজের হাত খুবই নিখুঁত। বাইকের পিকআপের ঝামেলা নিমেষেই সমাধান করে দিয়েছেন।"</p>
-        <p class="en-review">"Exceptional craftsmanship. Diagnosed and fixed my bike's pick-up issue smoothly."</p>
-        <div class="author">— তানভীর আহমেদ / Tanvir Ahmed (FZ-S)</div>
-      </div>
-      <div class="review-item">
-        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p>"২০ বছরের অভিজ্ঞতার সঠিক মূল্যায়ন পেয়েছি। কোনো অপ্রয়োজনীয় পার্টস বদলানোর পরামর্শ দেন না।"</p>
-        <p class="en-review">"20+ years of solid experience clearly reflects in his work. Highly recommended."</p>
-        <div class="author">— রাশেদুল ইসলাম / Rashedul Islam (RTR 4V)</div>
+      <div class="section-title"><i class="fa-solid fa-star"></i> গ্রাহকদের রিভিউ ও মূল্যায়ন | Customer Reviews & Feedback</div>
+      <div class="review-grid">
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"নয়ন ভাইয়ের কাজের হাত খুবই নিখুঁত। বাইকের পিকআপ ড্রপের সমস্যা এক দেখাতেই সমাধান করেছেন।"</p>
+          <p class="en-review">"Top-class mechanical diagnostic skills. Resolved my motorcycle's throttle drop smoothly."</p>
+          <div class="author">— তানভীর আহমেদ / Tanvir Ahmed (Yamaha FZ-S v2)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"২০ বছরের অভিজ্ঞতার প্রমাণ ওনার কাজে পাওয়া যায়। কোনো বাড়তি পার্টস পরিবর্তনের খরচ করান না।"</p>
+          <p class="en-review">"20+ years of solid experience speaks in his work. Highly trustworthy and budget-friendly."</p>
+          <div class="author">— রাশেদুল ইসলাম / Rashedul Islam (TVS RTR 4V)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"মাস্টার সার্ভিসের পর বাইক একেবারে নতুন কেনার মতো স্মুথ পারফরম্যান্স দিচ্ছে।"</p>
+          <p class="en-review">"After his comprehensive master service, my bike feels crisp and brand new."</p>
+          <div class="author">— ফারহান কবির / Farhan Kabir (Suzuki Gixxer SF)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"ইঞ্জিনের অস্বাভাবিক ট্যাপেট সাউন্ড অন্য কোথাও ঠিক করতে পারেনি, নয়ন ভাই পারফেক্ট টিউনিং করে দিয়েছেন।"</p>
+          <p class="en-review">"Fixed the annoying engine tapping noise with precise feeler gauge adjustment."</p>
+          <div class="author">— মাহমুদ হাসান / Mahmud Hasan (Honda CB Trigger)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"খুবই পরিষ্কার-পরিচ্ছন্ন কাজ। প্রতিটি পার্টস আলাদা করে পেট্রোল ওয়াশ করে ফিট করেন।"</p>
+          <p class="en-review">"Detailed, clean, and patient workmanship. Truly an expert master technician."</p>
+          <div class="author">— শাকিল চৌধুরী / Shakil Chowdhury (Bajaj Pulsar 150)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"ট্যুরে যাওয়ার আগে ওনার কাছ থেকে ফুল চেকআপ করাই। লং রাইডে কোনো বিড়ম্বনায় পড়তে হয়নি।"</p>
+          <p class="en-review">"Always do my pre-tour checkups here. Zero mechanical issues during long highway rides."</p>
+          <div class="author">— আরিফুল হক / Ariful Haque (Yamaha R15 V3)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"কার্বুরেটর টিউনিংয়ে ওনার চেয়ে নিখুঁত হাত ঢাকায় খুব কম আছে। মাইলেজ অনেক বেড়েছে।"</p>
+          <p class="en-review">"Exceptional carburetor air-fuel tuning skills. Improved my fuel economy significantly."</p>
+          <div class="author">— মেহরাব হোসেন / Mehrab Hossain (Hero Hunk 150)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"ইলেক্ট্রিক্যাল রিলে ও ফগলাইট ওয়্যারিংয়ের কাজগুলো অসাধারণ টেকনিক্যাল দক্ষতায় করেন।"</p>
+          <p class="en-review">"Flawless electrical wiring with relays and fuses. Clean, safe, and professional."</p>
+          <div class="author">— সাজ্জাদুল করিম / Sazzadul Karim (KTM Duke 125)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"কাজের পাশাপাশি বাইক মেইনটেইনের দারুণ সব শিক্ষণীয় পরামর্শ দেন, যা সত্যিই উপকারী।"</p>
+          <p class="en-review">"He generously guides riders on proper bike care. Valuable and authentic advice."</p>
+          <div class="author">— নাসিম ইকবাল / Nasim Iqbal (Lifan KPR 165)</div>
+        </div>
+
+        <div class="review-item">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"সততা ও দক্ষ কাজের সেরা সমন্বয়। আমার পরিচিত সবাইকে নয়ন ভাইয়ের কাছেই পাঠাই।"</p>
+          <p class="en-review">"A combination of pure honesty and high-level craftsmanship. 100% recommended."</p>
+          <div class="author">— কামরুল হাসান / Kamrul Hasan (TVS Apache RTR 160)</div>
+        </div>
+
       </div>
     </div>
 
-    <!-- ৮. সবার নিচে আপনার নিজের ছবি সহ পরিচিতি (About Me) -->
+    <!-- ৮. ৮টি ছবির কাজের গ্যালারি -->
+    <div class="section-card">
+      <div class="section-title"><i class="fa-solid fa-camera"></i> কাজের ফটো গ্যালারি | Recent Works Gallery (8 Photos)</div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="1.png" alt="Work 1" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+1'"></div>
+        <div class="gallery-item"><img src="2.png" alt="Work 2" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+2'"></div>
+        <div class="gallery-item"><img src="3.png" alt="Work 3" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+3'"></div>
+        <div class="gallery-item"><img src="4.png" alt="Work 4" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+4'"></div>
+        <div class="gallery-item"><img src="5.png" alt="Work 5" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+5'"></div>
+        <div class="gallery-item"><img src="6.png" alt="Work 6" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+6'"></div>
+        <div class="gallery-item"><img src="7.png" alt="Work 7" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+7'"></div>
+        <div class="gallery-item"><img src="8.png" alt="Work 8" onerror="this.src='https://via.placeholder.com/400x300/131c2e/38bdf8?text=Service+8'"></div>
+      </div>
+    </div>
+
+    <!-- ৯. পরিচিতি ও ছবি (About Me - ১০০% Bilingual) -->
     <div class="about-me-card">
-      <img src="profile.jpg" alt="Md Mejbauddin Nayan" class="my-photo" onerror="this.src='https://via.placeholder.com/140/1e293b/38bdf8?text=My+Photo'">
+      <img src="profile.jpg" alt="Md Mejbauddin Nayan" class="my-photo" onerror="this.src='https://via.placeholder.com/140/131c2e/38bdf8?text=My+Photo'">
       <div class="about-details">
-        <h2>Md Mejbauddin Nayan</h2>
-        <div class="role">Automotive Technician & Motorcycle Specialist</div>
-        <p>মোটরসাইকেল সার্ভিসিং ও ইঞ্জিন ডায়াগনোসিসে আমার দীর্ঘ ২০ বছরেরও বেশি সময়ের বাস্তব অভিজ্ঞতা রয়েছে। আপনার মূল্যবান বাইকের সর্বোত্তম পারফরম্যান্স এবং সঠিক মেইনটেন্যান্স নিশ্চিত করাই আমার লক্ষ্য।</p>
-        <p class="en-bio">With over 20 years of hands-on expertise in motorcycle maintenance, engine diagnostics, and tuning, I am dedicated to keeping your ride safe, reliable, and performing at its best.</p>
+        <h2>Md Mejbauddin Nayan | মো: মেজবাউদ্দিন নয়ন</h2>
+        <div class="role">Automotive Engineer & Motorcycle Specialist | অটোমোবাইল ইঞ্জিনিয়ার ও টেকনিশিয়ান</div>
+        <p>মোটরসাইকেল সার্ভিসিং, ইঞ্জিন ওভারহোলিং ও নিখুঁত ডায়াগনোসিসে আমার দীর্ঘ ২০ বছরেরও বেশি সময়ের পেশাদার অভিজ্ঞতা রয়েছে। আপনার বাইকের সর্বোচ্চ নির্ভরযোগ্যতা, সঠিক রক্ষণাবেক্ষণ এবং দীর্ঘস্থায়ী পারফরম্যান্স নিশ্চিত করাই আমার মূল লক্ষ্য।</p>
+        <p class="en-bio">With over 20 years of hands-on technical experience in motorcycle servicing, engine rebuilding, and precision diagnostics, I am dedicated to delivering top-tier maintenance and peak performance for every rider.</p>
       </div>
     </div>
 
