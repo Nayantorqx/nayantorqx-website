@@ -36,7 +36,6 @@
       padding-bottom: 80px;
     }
 
-    /* রেসপনসিভ ব্যানার */
     .banner {
       width: 100%;
       height: 280px;
@@ -53,7 +52,6 @@
       object-fit: cover;
     }
 
-    /* বড় কনটেইনার */
     .container {
       max-width: 1200px;
       width: 94%;
@@ -61,7 +59,6 @@
       padding: 0 16px;
     }
 
-    /* হেডার ও লোগো */
     .profile-area {
       text-align: center;
       margin-top: -75px;
@@ -104,7 +101,6 @@
       margin-top: 8px;
     }
 
-    /* সোশ্যাল লিংক গ্রিড */
     .links-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -132,7 +128,6 @@
       transform: translateY(-2px);
     }
 
-    /* সেকশন কার্ড */
     .section-card {
       background-color: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -152,7 +147,6 @@
       padding-bottom: 12px;
     }
 
-    /* ফর্ম ইনপুট ও আইকন স্টাইল */
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -227,7 +221,6 @@
       background: #059669;
     }
 
-    /* সার্ভিস শিডিউল */
     .schedule-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -254,7 +247,6 @@
       font-size: 0.88rem;
     }
 
-    /* ২০টি টিপস (২ কলাম) */
     .tips-grid-2col {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -299,7 +291,6 @@
       margin-top: 4px;
     }
 
-    /* ভিডিও */
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -317,7 +308,6 @@
       border: none;
     }
 
-    /* কাস্টমার রিভিউ গ্রিড */
     .review-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -382,7 +372,6 @@
       color: #090e17;
     }
 
-    /* গ্যালারি */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -406,7 +395,6 @@
       transform: scale(1.06);
     }
 
-    /* About Me */
     .about-me-card {
       display: flex;
       gap: 25px;
@@ -448,7 +436,6 @@
       color: var(--text-muted);
     }
 
-    /* রেসপনসিভ মোবাইল ভিউ */
     @media (max-width: 850px) {
       .container {
         width: 100%;
@@ -510,7 +497,7 @@
       <a href="tel:01675884401" class="link-item" style="border-color: var(--green);"><i class="fa-solid fa-phone" style="color: var(--green);"></i> Call Now: 01675884401 | সরাসরি কল করুন</a>
     </div>
 
-    <!-- ৪. সার্ভিস বুকিং ও সিরিয়াল ফর্ম (ডাইনামিক জেন্ডার আইকন সহ) -->
+    <!-- ৪. সার্ভিস বুকিং ও সিরিয়াল ফর্ম -->
     <div class="section-card" id="booking" style="border: 2px solid var(--green);">
       <div class="section-title" style="color: var(--green);"><i class="fa-solid fa-calendar-check"></i> সার্ভিস সিরিয়াল ও বুকিং | Book Service Serial</div>
       <form onsubmit="handleBooking(event)">
@@ -520,7 +507,7 @@
             <label><i class="fa-solid fa-user"></i> আপনার নাম | Full Name:</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-user-pen field-icon"></i>
-              <input type="text" id="b_name" class="form-control" placeholder="उदा: Tanvir Ahmed" required>
+              <input type="text" id="b_name" class="form-control" placeholder="যেমন: Tanvir Ahmed / e.g. Tanvir Ahmed" required>
             </div>
           </div>
           <div class="form-group">
@@ -548,7 +535,7 @@
             <label><i class="fa-solid fa-motorcycle"></i> বাইকের মডেল | Bike Model:</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-gauge-high field-icon"></i>
-              <input type="text" id="b_model" class="form-control" placeholder="उदा: TVS RTR 4V / Yamaha FZ-S" required>
+              <input type="text" id="b_model" class="form-control" placeholder="যেমন: TVS RTR 4V / Yamaha FZ-S" required>
             </div>
           </div>
         </div>
@@ -877,7 +864,7 @@
         <i class="fa-solid fa-chevron-down"></i> আরও ৭টি কাস্টমার রিভিউ দেখুন | Show All 10 Reviews
       </button>
 
-      <!-- কাস্টমার ফিডব্যাক ফর্ম (ডাইনামিক জেন্ডার আইকন সহ) -->
+      <!-- কাস্টমার ফিডব্যাক ফর্ম -->
       <div style="background: rgba(9, 14, 23, 0.7); border: 2px dashed var(--accent); padding: 22px; border-radius: 12px; margin-top: 20px;">
         <h3 style="color: var(--accent); font-size: 1.15rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
           <i class="fa-solid fa-pen-to-square"></i> আপনার মতামত বা রিভিউ দিন | Submit Your Review
@@ -889,7 +876,7 @@
               <label><i class="fa-solid fa-user-tag"></i> আপনার নাম ও বাইকের মডেল | Name & Bike:</label>
               <div class="input-wrapper">
                 <i class="fa-solid fa-id-card field-icon"></i>
-                <input type="text" id="r_name" class="form-control" placeholder="उदा: Tanvir (FZ-S v2)" required>
+                <input type="text" id="r_name" class="form-control" placeholder="যেমন: Tanvir (FZ-S v2) / e.g. Tanvir (FZ-S v2)" required>
               </div>
             </div>
             
@@ -961,20 +948,19 @@
   </div>
 
   <script>
-    // জেন্ডার অনুযায়ী আইকন ও কালার পরিবর্তন করার ফাংশন
     function updateGenderIcon(selectId, iconId) {
       const gender = document.getElementById(selectId).value;
       const icon = document.getElementById(iconId);
 
       if (gender === 'Male') {
         icon.className = 'fa-solid fa-person field-icon';
-        icon.style.color = '#38bdf8'; // পুরুষ: ব্লু কালার
+        icon.style.color = '#38bdf8';
       } else if (gender === 'Female') {
         icon.className = 'fa-solid fa-person-dress field-icon';
-        icon.style.color = '#ec4899'; // নারী: পিংক কালার
+        icon.style.color = '#ec4899';
       } else {
         icon.className = 'fa-solid fa-user field-icon';
-        icon.style.color = '#94a3b8'; // অন্যান্য: নিউট্রাল গ্রে
+        icon.style.color = '#94a3b8';
       }
     }
 
