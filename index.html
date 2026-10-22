@@ -183,12 +183,13 @@
       position: absolute;
       left: 14px;
       color: #64748b;
-      font-size: 1rem;
+      font-size: 1.1rem;
       pointer-events: none;
+      transition: all 0.25s ease;
     }
     .form-control {
       width: 100%;
-      padding: 12px 14px 12px 42px; /* বামপাশে আইকনের জন্য জায়গা */
+      padding: 12px 14px 12px 42px;
       background: #090e17;
       border: 1px solid var(--card-border);
       border-radius: 8px;
@@ -509,7 +510,7 @@
       <a href="tel:01675884401" class="link-item" style="border-color: var(--green);"><i class="fa-solid fa-phone" style="color: var(--green);"></i> Call Now: 01675884401 | সরাসরি কল করুন</a>
     </div>
 
-    <!-- ৪. সার্ভিস বুকিং ও সিরিয়াল ফর্ম (আইকন এবং জেন্ডার অপশন সহ) -->
+    <!-- ৪. সার্ভিস বুকিং ও সিরিয়াল ফর্ম (ডাইনামিক জেন্ডার আইকন সহ) -->
     <div class="section-card" id="booking" style="border: 2px solid var(--green);">
       <div class="section-title" style="color: var(--green);"><i class="fa-solid fa-calendar-check"></i> সার্ভিস সিরিয়াল ও বুকিং | Book Service Serial</div>
       <form onsubmit="handleBooking(event)">
@@ -535,8 +536,8 @@
           <div class="form-group">
             <label><i class="fa-solid fa-venus-mars"></i> জেন্ডার | Gender:</label>
             <div class="input-wrapper">
-              <i class="fa-solid fa-person-half-dress field-icon"></i>
-              <select id="b_gender" class="form-control">
+              <i class="fa-solid fa-person field-icon" id="b_gender_icon" style="color: #38bdf8;"></i>
+              <select id="b_gender" class="form-control" onchange="updateGenderIcon('b_gender', 'b_gender_icon')">
                 <option value="Male">পুরুষ | Male</option>
                 <option value="Female">নারী | Female</option>
                 <option value="Other">অন্যান্য | Other</option>
@@ -876,7 +877,7 @@
         <i class="fa-solid fa-chevron-down"></i> আরও ৭টি কাস্টমার রিভিউ দেখুন | Show All 10 Reviews
       </button>
 
-      <!-- কাস্টমার ফিডব্যাক ফর্ম (আইকন এবং জেন্ডার অপশন সহ) -->
+      <!-- কাস্টমার ফিডব্যাক ফর্ম (ডাইনামিক জেন্ডার আইকন সহ) -->
       <div style="background: rgba(9, 14, 23, 0.7); border: 2px dashed var(--accent); padding: 22px; border-radius: 12px; margin-top: 20px;">
         <h3 style="color: var(--accent); font-size: 1.15rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
           <i class="fa-solid fa-pen-to-square"></i> আপনার মতামত বা রিভিউ দিন | Submit Your Review
@@ -895,8 +896,8 @@
             <div class="form-group">
               <label><i class="fa-solid fa-venus-mars"></i> জেন্ডার | Gender:</label>
               <div class="input-wrapper">
-                <i class="fa-solid fa-person-half-dress field-icon"></i>
-                <select id="r_gender" class="form-control">
+                <i class="fa-solid fa-person field-icon" id="r_gender_icon" style="color: #38bdf8;"></i>
+                <select id="r_gender" class="form-control" onchange="updateGenderIcon('r_gender', 'r_gender_icon')">
                   <option value="Male">পুরুষ | Male</option>
                   <option value="Female">নারী | Female</option>
                   <option value="Other">অন্যান্য | Other</option>
@@ -960,6 +961,23 @@
   </div>
 
   <script>
+    // জেন্ডার অনুযায়ী আইকন ও কালার পরিবর্তন করার ফাংশন
+    function updateGenderIcon(selectId, iconId) {
+      const gender = document.getElementById(selectId).value;
+      const icon = document.getElementById(iconId);
+
+      if (gender === 'Male') {
+        icon.className = 'fa-solid fa-person field-icon';
+        icon.style.color = '#38bdf8'; // পুরুষ: ব্লু কালার
+      } else if (gender === 'Female') {
+        icon.className = 'fa-solid fa-person-dress field-icon';
+        icon.style.color = '#ec4899'; // নারী: পিংক কালার
+      } else {
+        icon.className = 'fa-solid fa-user field-icon';
+        icon.style.color = '#94a3b8'; // অন্যান্য: নিউট্রাল গ্রে
+      }
+    }
+
     function toggleReviews() {
       const more = document.getElementById('moreReviews');
       const btn = document.getElementById('toggleReviewBtn');
