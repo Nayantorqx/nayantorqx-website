@@ -149,7 +149,6 @@
       padding-bottom: 12px;
     }
 
-    /* ব্লগ স্টাইল */
     .blog-post {
       background: rgba(9, 14, 23, 0.7);
       border: 1px solid var(--card-border);
@@ -200,7 +199,6 @@
       color: var(--text-muted);
     }
 
-    /* ফর্ম ইনপুট */
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -266,7 +264,6 @@
       top: 14px;
     }
 
-    /* বাটন গ্রুপ */
     .btn-action-group {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -299,7 +296,6 @@
       background: #c5221f;
     }
 
-    /* সার্ভিস শিডিউল */
     .schedule-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -326,7 +322,6 @@
       font-size: 0.88rem;
     }
 
-    /* ২০টি টিপস */
     .tips-grid-2col {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -371,7 +366,6 @@
       margin-top: 4px;
     }
 
-    /* ভিডিও গ্যালারি */
     .video-gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -410,7 +404,6 @@
       color: var(--text-muted);
     }
 
-    /* কাস্টমার রিভিউ */
     .review-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -475,7 +468,6 @@
       color: #090e17;
     }
 
-    /* ছবির গ্যালারি */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -499,7 +491,6 @@
       transform: scale(1.06);
     }
 
-    /* About Me */
     .about-me-card {
       display: flex;
       gap: 25px;
@@ -591,13 +582,11 @@
 </head>
 <body>
 
-  <!-- ব্যানার -->
   <div class="banner">
     <img src="banner.png" alt="NayanTorqx Banner" onerror="this.style.display='none'">
   </div>
 
   <div class="container">
-    <!-- লোগো ও মূল পরিচিতি (NayanTorqx Auto) -->
     <div class="profile-area">
       <img src="logo.png" alt="NayanTorqx Logo" class="avatar-logo" onerror="this.src='https://via.placeholder.com/145/131c2e/38bdf8?text=NayanTorqx'">
       <h1>NayanTorqx Auto</h1>
@@ -606,11 +595,11 @@
       <div class="exp-badge">⚡ 20+ Years of Professional Experience | ২০+ বছরের নিজস্ব বিশ্বস্ত অভিজ্ঞতা</div>
     </div>
 
-    <!-- সোশ্যাল মিডিয়া, ডিরেক্ট কল ও ইমেইল বাটন -->
+    <!-- সোশ্যাল মিডিয়া, ডিরেক্ট কল, ফেসবুক পেজ ও প্রোফাইলের নিখুঁত লিংক যুক্ত বাটনসমূহ -->
     <div class="links-grid">
       <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel | অফিশিয়াল চ্যানেল</a>
-      <a href="https://facebook.com/?checkpoint_src=any target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page | ফেসবুক পেজ</a>
-      <a href="https://facebook.com/mejbauddinnoyonkhan" target="_blank" class="link-item"><i class="fa-solid fa-user" style="color: #38bdf8;"></i> Personal Profile | ফেসবুক প্রোফাইল</a>
+      <a href="https://www.facebook.com/profile.php?id=61592150249724" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page | অফিশিয়াল পেজ</a>
+      <a href="https://www.facebook.com/mejbauddinnoyonkhan" target="_blank" class="link-item"><i class="fa-solid fa-user" style="color: #38bdf8;"></i> Personal Profile | ফেসবুক প্রোফাইল</a>
       <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram Profile | ইনস্টাগ্রাম</a>
       <a href="https://tiktok.com" target="_blank" class="link-item"><i class="fa-brands fa-tiktok"></i> TikTok Profile | টিকটক প্রোফাইল</a>
       <a href="tel:01675884401" class="link-item" style="border-color: var(--green);"><i class="fa-solid fa-phone" style="color: var(--green);"></i> Call Now: 01675884401 | সরাসরি কল করুন</a>
@@ -637,7 +626,7 @@
       </div>
     </div>
 
-    <!-- ২. সার্ভিস বুকিং ও সিরিয়াল ফর্ম (হোয়াটসঅ্যাপ ও ইমেইল দুটোই যুক্ত) -->
+    <!-- ২. সার্ভিস বুকিং ও সিরিয়াল ফর্ম -->
     <div class="section-card" id="booking" style="border: 2px solid var(--green);">
       <div class="section-title" style="color: var(--green);"><i class="fa-solid fa-calendar-check"></i> সার্ভিস সিরিয়াল ও বুকিং | Book Service Serial</div>
       <form onsubmit="handleBooking(event, 'whatsapp')">
@@ -1216,7 +1205,7 @@
       </div>
     </div>
 
-    <!-- ৮. প্রতিষ্ঠাতা পরিচিতি (About Founder) -->
+    <!-- ৮. প্রতিষ্ঠাতা পরিচিতি -->
     <div class="about-me-card">
       <img src="profile.jpg" alt="Md Mejbauddin (Nayan)" class="my-photo" onerror="this.src='https://via.placeholder.com/150/131c2e/38bdf8?text=My+Photo'">
       <div class="about-details">
