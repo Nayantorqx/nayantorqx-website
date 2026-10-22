@@ -18,6 +18,7 @@
       --primary: #38bdf8;
       --accent: #f97316;
       --green: #10b981;
+      --mail-color: #ea4335;
       --text: #f1f5f9;
       --text-muted: #94a3b8;
     }
@@ -264,6 +265,14 @@
     .textarea-wrapper i.field-icon {
       top: 14px;
     }
+
+    /* বাটন গ্রুপ */
+    .btn-action-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
     .btn-submit {
       width: 100%;
       background: var(--green);
@@ -271,7 +280,7 @@
       border: none;
       padding: 14px;
       border-radius: 8px;
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
@@ -282,6 +291,12 @@
     }
     .btn-submit:hover {
       background: #059669;
+    }
+    .btn-mail {
+      background: var(--mail-color);
+    }
+    .btn-mail:hover {
+      background: #c5221f;
     }
 
     /* সার্ভিস শিডিউল */
@@ -525,6 +540,14 @@
       font-size: 0.88rem;
       color: var(--text-muted);
     }
+    .email-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .email-link:hover {
+      text-decoration: underline;
+    }
 
     @media (max-width: 850px) {
       .container {
@@ -537,7 +560,7 @@
       .blog-post {
         grid-template-columns: 1fr;
       }
-      .form-row {
+      .form-row, .btn-action-group {
         grid-template-columns: 1fr;
       }
       .schedule-grid {
@@ -583,7 +606,7 @@
       <div class="exp-badge">⚡ 20+ Years of Professional Experience | ২০+ বছরের নিজস্ব বিশ্বস্ত অভিজ্ঞতা</div>
     </div>
 
-    <!-- সোশ্যাল মিডিয়া ও ডিরেক্ট কল বাটন -->
+    <!-- সোশ্যাল মিডিয়া, ডিরেক্ট কল ও ইমেইল বাটন -->
     <div class="links-grid">
       <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel | অফিশিয়াল চ্যানেল</a>
       <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page | ফেসবুক পেজ</a>
@@ -591,6 +614,7 @@
       <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram Profile | ইনস্টাগ্রাম</a>
       <a href="https://tiktok.com" target="_blank" class="link-item"><i class="fa-brands fa-tiktok"></i> TikTok Profile | টিকটক প্রোফাইল</a>
       <a href="tel:01675884401" class="link-item" style="border-color: var(--green);"><i class="fa-solid fa-phone" style="color: var(--green);"></i> Call Now: 01675884401 | সরাসরি কল করুন</a>
+      <a href="mailto:nayantorqx@gmail.com" class="link-item" style="border-color: var(--mail-color);"><i class="fa-solid fa-envelope" style="color: var(--mail-color);"></i> Email: nayantorqx@gmail.com | সরাসরি মেইল করুন</a>
     </div>
 
     <!-- ১. সাপ্তাহিক/দৈনিক কাজের ব্লগ ও আপডেট -->
@@ -613,10 +637,10 @@
       </div>
     </div>
 
-    <!-- ২. সার্ভিস বুকিং ও সিরিয়াল ফর্ম -->
+    <!-- ২. সার্ভিস বুকিং ও সিরিয়াল ফর্ম (হোয়াটসঅ্যাপ ও ইমেইল দুটোই যুক্ত) -->
     <div class="section-card" id="booking" style="border: 2px solid var(--green);">
       <div class="section-title" style="color: var(--green);"><i class="fa-solid fa-calendar-check"></i> সার্ভিস সিরিয়াল ও বুকিং | Book Service Serial</div>
-      <form onsubmit="handleBooking(event)">
+      <form onsubmit="handleBooking(event, 'whatsapp')">
         
         <div class="form-row">
           <div class="form-group">
@@ -778,7 +802,10 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-submit"><i class="fa-brands fa-whatsapp"></i> সিরিয়াল বুক করুন (WhatsApp Serial)</button>
+        <div class="btn-action-group">
+          <button type="submit" class="btn-submit"><i class="fa-brands fa-whatsapp"></i> WhatsApp-এ বুক করুন</button>
+          <button type="button" class="btn-submit btn-mail" onclick="handleBooking(event, 'email')"><i class="fa-solid fa-envelope"></i> Email-এ বুক করুন</button>
+        </div>
       </form>
     </div>
 
@@ -1121,7 +1148,7 @@
         <h3 style="color: var(--accent); font-size: 1.15rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
           <i class="fa-solid fa-pen-to-square"></i> আপনার মতামত বা রিভিউ দিন | Submit Your Review
         </h3>
-        <form onsubmit="handleReview(event)">
+        <form onsubmit="handleReview(event, 'whatsapp')">
           
           <div class="form-row">
             <div class="form-group">
@@ -1165,7 +1192,10 @@
             </div>
           </div>
 
-          <button type="submit" class="btn-submit" style="background: var(--accent);"><i class="fa-solid fa-paper-plane"></i> রিভিউ পোস্ট করুন (Send Review)</button>
+          <div class="btn-action-group">
+            <button type="submit" class="btn-submit" style="background: var(--accent);"><i class="fa-brands fa-whatsapp"></i> WhatsApp-এ রিভিউ দিন</button>
+            <button type="button" class="btn-submit btn-mail" onclick="handleReview(event, 'email')"><i class="fa-solid fa-envelope"></i> Email-এ রিভিউ দিন</button>
+          </div>
         </form>
       </div>
 
@@ -1192,8 +1222,8 @@
       <div class="about-details">
         <h2>Md Mejbauddin (Nayan) | মো: মেজবাউদ্দিন (নয়ন)</h2>
         <div class="role">Founder, NayanTorqx Auto | Diploma in Automobile Engineering (৪ বছর মেয়াদি ডিপ্লোমা ইন অটোমোবাইল ইঞ্জিনিয়ার)</div>
-        <p>ডিপ্লোমা ইন অটোমোবাইল ইঞ্জিনিয়ারিং শিক্ষা ও দীর্ঘ ২০ বছরের প্রত্যক্ষ মেকানিক্যাল অভিজ্ঞতার সমন্বয়ে প্রতিষ্ঠিত 'NayanTorqx Auto'। যেকোনো আধুনিক বা ক্লাসিক মোটরসাইকেলের নিখুঁত ইঞ্জিন ওভারহোলিং, এফআই ডায়াগনোসিস এবং রাইডারদের শতভাগ স্বচ্ছ ও নির্ভরযোগ্য কারিগরি সেবা নিশ্চিত করাই আমাদের প্রধান অঙ্গীকার।</p>
-        <p class="en-bio">Founded by Md Mejbauddin (Nayan) [Diploma in Automobile Engineering] with 20+ years of hands-on technical excellence. NayanTorqx Auto is dedicated to precision diagnostics, engine rebuilds, and authentic craftsmanship for every rider.</p>
+        <p>ডিপ্লোমা ইন অটোমোবাইল ইঞ্জিনিয়ারিং শিক্ষা ও দীর্ঘ ২০ বছরের প্রত্যক্ষ মেকানিক্যাল অভিজ্ঞতার সমন্বয়ে প্রতিষ্ঠিত 'NayanTorqx Auto'। যেকোনো আধুনিক বা ক্লাসিক মোটরসাইকেলের নিখুঁত ইঞ্জিন ওভারহোলিং, এফআই ডায়াগনোসিস এবং রাইডারদের শতভাগ স্বচ্ছ ও নির্ভরযোগ্য কারিগরি সেবা নিশ্চিত করাই আমাদের প্রধান অঙ্গীকার। সরাসরি যোগাযোগের জন্য ইমেইল করতে পারেন: <a href="mailto:nayantorqx@gmail.com" class="email-link">nayantorqx@gmail.com</a></p>
+        <p class="en-bio">Founded by Md Mejbauddin (Nayan) [Diploma in Automobile Engineering] with 20+ years of hands-on technical excellence. NayanTorqx Auto is dedicated to precision diagnostics, engine rebuilds, and authentic craftsmanship. Contact email: nayantorqx@gmail.com</p>
       </div>
     </div>
 
@@ -1230,8 +1260,8 @@
       }
     }
 
-    function handleBooking(e) {
-      e.preventDefault();
+    function handleBooking(e, channel) {
+      if(e) e.preventDefault();
       const name = document.getElementById('b_name').value;
       const phone = document.getElementById('b_phone').value;
       const gender = document.getElementById('b_gender').value;
@@ -1239,21 +1269,41 @@
       const type = document.getElementById('b_type').value;
       const msg = document.getElementById('b_msg').value;
 
-      const text = `*New Service Booking - NayanTorqx Auto*%0A*Name:* ${name}%0A*Gender:* ${gender}%0A*Phone:* ${phone}%0A*Bike:* ${model}%0A*Service:* ${type}%0A*Note:* ${msg}`;
-      window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
+      if(!name || !phone || !model || !type) {
+        alert('অনুগ্রহ করে প্রয়োজনীয় তথ্যগুলো পূরণ করুন।');
+        return;
+      }
+
+      if (channel === 'whatsapp') {
+        const text = `*New Service Booking - NayanTorqx Auto*%0A*Name:* ${name}%0A*Gender:* ${gender}%0A*Phone:* ${phone}%0A*Bike:* ${model}%0A*Service:* ${type}%0A*Note:* ${msg}`;
+        window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
+      } else if (channel === 'email') {
+        const subject = encodeURIComponent(`Service Booking: ${name} - ${model}`);
+        const body = encodeURIComponent(`New Service Booking Details:\n\nName: ${name}\nGender: ${gender}\nPhone: ${phone}\nBike Model: ${model}\nService Type: ${type}\nNotes/Date: ${msg}`);
+        window.location.href = `mailto:nayantorqx@gmail.com?subject=${subject}&body=${body}`;
+      }
     }
 
-    function handleReview(e) {
-      e.preventDefault();
+    function handleReview(e, channel) {
+      if(e) e.preventDefault();
       const name = document.getElementById('r_name').value;
       const gender = document.getElementById('r_gender').value;
       const star = document.getElementById('r_star').value;
       const msg = document.getElementById('r_msg').value;
 
-      const text = `*New Customer Review - NayanTorqx Auto*%0A*From:* ${name}%0A*Gender:* ${gender}%0A*Rating:* ${star}%0A*Review:* ${msg}`;
-      window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
-      alert('আপনার মূল্যবান মতামতের জন্য ধন্যবাদ! রিভিউটি NayanTorqx Auto টিমের কাছে পাঠানো হয়েছে।');
-      e.target.reset();
+      if(!name || !msg) {
+        alert('অনুগ্রহ করে নাম এবং মন্তব্যের ঘর পূরণ করুন।');
+        return;
+      }
+
+      if (channel === 'whatsapp') {
+        const text = `*New Customer Review - NayanTorqx Auto*%0A*From:* ${name}%0A*Gender:* ${gender}%0A*Rating:* ${star}%0A*Review:* ${msg}`;
+        window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
+      } else if (channel === 'email') {
+        const subject = encodeURIComponent(`Customer Review from ${name}`);
+        const body = encodeURIComponent(`Customer Review Details:\n\nName: ${name}\nGender: ${gender}\nRating: ${star}\nReview / Feedback: ${msg}`);
+        window.location.href = `mailto:nayantorqx@gmail.com?subject=${subject}&body=${body}`;
+      }
     }
   </script>
 
