@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nayan Torq X | Professional Motorcycle Service & Maintenance Hub</title>
+  <title>Nayan Torq X | Professional Motorcycle Service & Rider Guide</title>
   
-  <!-- ফন্ট এবং ফন্টঅসাম আইকন লিংক -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,7 +36,7 @@
       padding-bottom: 80px;
     }
 
-    /* ব্যানার */
+    /* কভার ব্যানার */
     .banner {
       width: 100%;
       height: 230px;
@@ -103,7 +102,7 @@
       margin-top: 8px;
     }
 
-    /* সোশ্যাল লিংক বাটন */
+    /* লিংক ও অ্যাকশন বাটন */
     .links-grid {
       display: flex;
       flex-direction: column;
@@ -131,7 +130,7 @@
       transform: translateY(-2px);
     }
 
-    /* সেকশন কার্ড */
+    /* কার্ড কনটেইনার */
     .section-card {
       background-color: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -149,6 +148,49 @@
       gap: 10px;
       border-bottom: 1px solid var(--card-border);
       padding-bottom: 10px;
+    }
+
+    /* ফর্ম ডিজাইন */
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      background: #090e17;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--primary);
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+    .btn-submit:hover {
+      background: #059669;
     }
 
     /* সার্ভিস শিডিউল */
@@ -236,11 +278,12 @@
       border: none;
     }
 
-    /* ১০ জন কাস্টমার রিভিউ গ্রিড */
+    /* কাস্টমার রিভিউ গ্রিড */
     .review-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 14px;
+      margin-bottom: 20px;
     }
     .review-item {
       background: rgba(9, 14, 23, 0.6);
@@ -270,7 +313,7 @@
       font-weight: 600;
     }
 
-    /* ৮টি ছবির গ্যালারি গ্রিড */
+    /* ৮টি ছবির গ্যালারি */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -294,7 +337,7 @@
       transform: scale(1.06);
     }
 
-    /* সবার নিচে বায়ো পরিচিতি (About Me) */
+    /* About Me পরিচিতি */
     .about-me-card {
       display: flex;
       gap: 20px;
@@ -353,24 +396,24 @@
 </head>
 <body>
 
-  <!-- ১. কভার ব্যানার (banner.png) -->
+  <!-- ১. কভার ব্যানার -->
   <div class="banner">
     <img src="banner.png" alt="NayanTorqx Banner" onerror="this.style.display='none'">
   </div>
 
   <div class="container">
-    <!-- ২. লোগো ও হেডার টাইটেল -->
+    <!-- ২. লোগো ও হেডার -->
     <div class="profile-area">
       <img src="logo.png" alt="NayanTorqx Logo" class="avatar-logo" onerror="this.src='https://via.placeholder.com/130/131c2e/38bdf8?text=NT+Logo'">
       <h1>Nayan Torq X</h1>
       <div class="tagline">Bike Expert Service Center | মোটরসাইকেল বিশেষজ্ঞ সেবা কেন্দ্র</div>
-      <div class="location"><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh | ঢাকা, বাংলাদেশ</div>
+      <div class="location"><i class="fa-solid fa-location-dot"></i> Fatullah, Narayanganj / Dhaka | ঢাকা, বাংলাদেশ</div>
       <div class="exp-badge">⚡ 20+ Years of Experience | ২০+ বছরের বাস্তব ও বিশ্বস্ত অভিজ্ঞতা</div>
     </div>
 
-    <!-- ৩. সোশ্যাল মিডিয়া ও কন্টাক্ট লিংক (Bilingual) -->
+    <!-- ৩. সোশ্যাল লিংক ও যোগাযোগ বাটন -->
     <div class="links-grid">
-      <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel | ইউটিউব চ্যানেল (ভিডিও টিউটোরিয়াল)</a>
+      <a href="https://youtube.com/@nayantorqx" target="_blank" class="link-item"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Channel | ইউটিউব চ্যানেল (টিউটোরিয়াল)</a>
       <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook Page | ফেসবুক পেজ (লাইক ও ফলো)</a>
       <a href="https://facebook.com" target="_blank" class="link-item"><i class="fa-solid fa-user" style="color: #38bdf8;"></i> Facebook Profile | ফেসবুক প্রোফাইল</a>
       <a href="https://instagram.com" target="_blank" class="link-item"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram Profile | ইনস্টাগ্রাম</a>
@@ -378,12 +421,46 @@
       <a href="tel:01675884401" class="link-item" style="border-color: var(--green);"><i class="fa-solid fa-phone" style="color: var(--green);"></i> Call Now: 01675884401 | সরাসরি কল করুন</a>
     </div>
 
-    <!-- ৪. প্রো সার্ভিস শিডিউল (১০০% বাংলা ও ইংলিশ) -->
+    <!-- ৪. সার্ভিস বুকিং ও সিরিয়াল ফর্ম (সরাসরি হোয়াটসঅ্যাপে বুকিং যাবে) -->
+    <div class="section-card" id="booking">
+      <div class="section-title"><i class="fa-solid fa-calendar-check"></i> সার্ভিস সিরিয়াল ও বুকিং | Book Service Serial</div>
+      <form onsubmit="handleBooking(event)">
+        <div class="form-group">
+          <label>আপনার নাম | Full Name:</label>
+          <input type="text" id="b_name" class="form-control" placeholder="उदा: Tanvir Ahmed" required>
+        </div>
+        <div class="form-group">
+          <label>ফোন নাম্বার | Phone Number:</label>
+          <input type="tel" id="b_phone" class="form-control" placeholder="017xxxxxxxx" required>
+        </div>
+        <div class="form-group">
+          <label>বাইকের মডেল | Bike Model:</label>
+          <input type="text" id="b_model" class="form-control" placeholder="उदा: TVS RTR 4V / Yamaha FZ-S" required>
+        </div>
+        <div class="form-group">
+          <label>সার্ভিসের ধরন | Service Type:</label>
+          <select id="b_type" class="form-control">
+            <option value="General Service">জেনারেল সার্ভিস | General Service</option>
+            <option value="Master Service">মাস্টার সার্ভিস | Master Service</option>
+            <option value="Engine Tuning / Overhaul">ইঞ্জিন টিউনিং / ওভারহোল | Engine Work</option>
+            <option value="Wiring / Light Work">ওয়্যারিং ও ইলেকট্রিক্যাল | Electrical Work</option>
+            <option value="Other">অন্যান্য সমস্যা | Other Issue</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>সমস্যা বা তারিখ | Issue Details / Preferred Date:</label>
+          <textarea id="b_msg" class="form-control" rows="2" placeholder="কবে আসতে চান বা বাইকে কী সমস্যা হচ্ছে লিখুন..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><i class="fa-brands fa-whatsapp"></i> সিরিয়াল বুক করুন (WhatsApp Serial)</button>
+      </form>
+    </div>
+
+    <!-- ৫. প্রো সার্ভিস শিডিউল -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> প্রো সার্ভিস শিডিউল | Pro Service Schedule & Guide</div>
       <div class="schedule-box">
         <h3>⚪ জেনারেল সার্ভিস (General Service)</h3>
-        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। নিয়মিত রাইডে ইঞ্জিন অয়েলের কার্যক্ষমতা কমে ও ফিল্টারে ময়লা জমে। যা করা হয়: কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব ও টেনশন চেক।</p>
+        <p><strong>সঠিক সময়:</strong> প্রতি ২,৫০০ - ৩,০০০ কিমি পর পর। কার্বুরেটর/এফআই ক্লিন, স্পার্ক প্লাগ চেক, এয়ার ফিল্টার ক্লিনিং, ক্লাচ ও ব্রেক ফ্রি-প্লে অ্যাডজাস্টমেন্ট এবং চেইন লুব ও টেনশন চেক।</p>
         <p class="en-text"><strong>Interval:</strong> Every 2,500 - 3,000 km. Regular riding degrades oil lubrication and clogs filters. Includes: Carburetor/FI cleaning, spark plug check, air filter cleaning, clutch/brake free-play adjustment, and drive chain lubrication & tension check.</p>
       </div>
       <div class="schedule-box">
@@ -393,7 +470,7 @@
       </div>
     </div>
 
-    <!-- ৫. ২০টি রাইডার সার্ভিস টিপস (১০০% বাংলা ও ইংরেজি) -->
+    <!-- ৬. ২০টি রাইডার সার্ভিস টিপস -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-lightbulb"></i> ২০টি শিক্ষণীয় বাইক সার্ভিস টিপস | 20 Pro Rider Maintenance Tips</div>
       <div class="tips-list">
@@ -581,7 +658,7 @@
       </div>
     </div>
 
-    <!-- ৬. কাজের ভিডিও (YouTube Video) -->
+    <!-- ৭. কাজের ভিডিও -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-video"></i> কাজের ভিডিও ও টিউটোরিয়াল | Work Video & Tutorials</div>
       <div class="video-container">
@@ -589,10 +666,12 @@
       </div>
     </div>
 
-    <!-- ৭. ১০ জন কাস্টমারের রিভিউ (১০০% বাংলা ও ইংরেজি) -->
+    <!-- ৮. ১০ জন কাস্টমারের রিভিউ ও সরাসরি ফিডব্যাক ফর্ম -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-star"></i> গ্রাহকদের রিভিউ ও মূল্যায়ন | Customer Reviews & Feedback</div>
-      <div class="review-grid">
+      
+      <!-- রিভিউ তালিকা -->
+      <div class="review-grid" id="review-list">
 
         <div class="review-item">
           <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -665,9 +744,31 @@
         </div>
 
       </div>
+
+      <!-- কাস্টমারদের রিভিউ দেওয়ার ফর্ম -->
+      <div style="background: rgba(9, 14, 23, 0.7); border: 1px dashed var(--card-border); padding: 18px; border-radius: 12px; margin-top: 15px;">
+        <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 12px;"><i class="fa-solid fa-pen-to-square"></i> আপনার মতামত বা রিভিউ দিন | Submit Your Review</h3>
+        <form onsubmit="handleReview(event)">
+          <div class="form-group">
+            <input type="text" id="r_name" class="form-control" placeholder="আপনার নাম ও বাইকের মডেল (Name & Bike Model)" required>
+          </div>
+          <div class="form-group">
+            <select id="r_star" class="form-control">
+              <option value="⭐⭐⭐⭐⭐ (৫ স্টার)">⭐⭐⭐⭐⭐ (5 Stars - চমৎকার)</option>
+              <option value="⭐⭐⭐⭐ (৪ স্টার)">⭐⭐⭐⭐ (4 Stars - ভালো)</option>
+              <option value="⭐⭐⭐ (৩ স্টার)">⭐⭐⭐ (3 Stars - সন্তোষজনক)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="r_msg" class="form-control" rows="2" placeholder="কাজের অভিজ্ঞতা সম্পর্কে আপনার মূল্যবান মন্তব্য লিখুন..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" style="background: var(--accent);"><i class="fa-solid fa-paper-plane"></i> রিভিউ পোস্ট করুন (Send Review)</button>
+        </form>
+      </div>
+
     </div>
 
-    <!-- ৮. ৮টি ছবির কাজের গ্যালারি -->
+    <!-- ৯. ৮টি ছবির কাজের গ্যালারি -->
     <div class="section-card">
       <div class="section-title"><i class="fa-solid fa-camera"></i> কাজের ফটো গ্যালারি | Recent Works Gallery (8 Photos)</div>
       <div class="gallery-grid">
@@ -682,7 +783,7 @@
       </div>
     </div>
 
-    <!-- ৯. পরিচিতি ও ছবি (About Me - ১০০% Bilingual) -->
+    <!-- ১০. পরিচিতি ও ছবি (About Me - ১০০% Bilingual) -->
     <div class="about-me-card">
       <img src="profile.jpg" alt="Md Mejbauddin Nayan" class="my-photo" onerror="this.src='https://via.placeholder.com/140/131c2e/38bdf8?text=My+Photo'">
       <div class="about-details">
@@ -694,6 +795,33 @@
     </div>
 
   </div>
+
+  <!-- বুকিং ও ফিডব্যাক হ্যান্ডলার স্ক্রিপ্ট -->
+  <script>
+    function handleBooking(e) {
+      e.preventDefault();
+      const name = document.getElementById('b_name').value;
+      const phone = document.getElementById('b_phone').value;
+      const model = document.getElementById('b_model').value;
+      const type = document.getElementById('b_type').value;
+      const msg = document.getElementById('b_msg').value;
+
+      const text = `*New Service Booking - NayanTorqx*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Bike:* ${model}%0A*Service:* ${type}%0A*Note:* ${msg}`;
+      window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
+    }
+
+    function handleReview(e) {
+      e.preventDefault();
+      const name = document.getElementById('r_name').value;
+      const star = document.getElementById('r_star').value;
+      const msg = document.getElementById('r_msg').value;
+
+      const text = `*New Customer Review - NayanTorqx*%0A*From:* ${name}%0A*Rating:* ${star}%0A*Review:* ${msg}`;
+      window.open(`https://wa.me/8801675884401?text=${text}`, '_blank');
+      alert('আপনার মূল্যবান মতামতের জন্য ধন্যবাদ! রিভিউটি আমাদের কাছে পাঠানো হয়েছে।');
+      e.target.reset();
+    }
+  </script>
 
 </body>
 </html>
