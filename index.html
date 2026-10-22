@@ -180,6 +180,7 @@
       font-size: 1.1rem;
       pointer-events: none;
       transition: all 0.25s ease;
+      z-index: 1;
     }
     .form-control {
       width: 100%;
@@ -194,6 +195,15 @@
     }
     .form-control:focus {
       border-color: var(--primary);
+    }
+    select.form-control optgroup {
+      background: #131c2e;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    select.form-control option {
+      background: #090e17;
+      color: #fff;
     }
     textarea.form-control {
       padding-left: 42px;
@@ -531,25 +541,127 @@
               </select>
             </div>
           </div>
+          
+          <!-- বাইকের মডেল ও সিসি ড্রপডাউন -->
           <div class="form-group">
-            <label><i class="fa-solid fa-motorcycle"></i> বাইকের মডেল | Bike Model:</label>
+            <label><i class="fa-solid fa-motorcycle"></i> বাইকের ব্র্যান্ড, মডেল ও সিসি | Bike Model & CC:</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-gauge-high field-icon"></i>
-              <input type="text" id="b_model" class="form-control" placeholder="যেমন: TVS RTR 4V / Yamaha FZ-S" required>
+              <select id="b_model" class="form-control" required>
+                <option value="" disabled selected>আপনার বাইক নির্বাচন করুন | Select Your Bike</option>
+                
+                <optgroup label="TVS">
+                  <option value="TVS Apache RTR 160 4V (160cc)">TVS Apache RTR 160 4V (160cc)</option>
+                  <option value="TVS Apache RTR 160 2V (160cc)">TVS Apache RTR 160 2V (160cc)</option>
+                  <option value="TVS Apache RTR 200 4V (200cc)">TVS Apache RTR 200 4V (200cc)</option>
+                  <option value="TVS Raider 125 (125cc)">TVS Raider 125 (125cc)</option>
+                  <option value="TVS Stryker 125 (125cc)">TVS Stryker 125 (125cc)</option>
+                  <option value="TVS Metro Plus (110cc)">TVS Metro Plus (110cc)</option>
+                  <option value="TVS NTorq 125 Scooter (125cc)">TVS NTorq 125 Scooter (125cc)</option>
+                </optgroup>
+
+                <optgroup label="Yamaha">
+                  <option value="Yamaha FZ / FZ-S V2/V3 (150cc)">Yamaha FZ / FZ-S V2/V3 (150cc)</option>
+                  <option value="Yamaha FZ-X (150cc)">Yamaha FZ-X (150cc)</option>
+                  <option value="Yamaha R15 V3/V4/M (155cc)">Yamaha R15 V3/V4/M (155cc)</option>
+                  <option value="Yamaha MT-15 (155cc)">Yamaha MT-15 (155cc)</option>
+                  <option value="Yamaha Saluto (125cc)">Yamaha Saluto (125cc)</option>
+                  <option value="Yamaha RayZR 125 Scooter (125cc)">Yamaha RayZR 125 Scooter (125cc)</option>
+                </optgroup>
+
+                <optgroup label="Bajaj">
+                  <option value="Bajaj Pulsar 150 (150cc)">Bajaj Pulsar 150 (150cc)</option>
+                  <option value="Bajaj Pulsar NS 160 / N160 (160cc)">Bajaj Pulsar NS 160 / N160 (160cc)</option>
+                  <option value="Bajaj Pulsar 125 / NS 125 (125cc)">Bajaj Pulsar 125 / NS 125 (125cc)</option>
+                  <option value="Bajaj Discover 110/125 (110-125cc)">Bajaj Discover 110/125 (110-125cc)</option>
+                  <option value="Bajaj Platina 100/110 (100-110cc)">Bajaj Platina 100/110 (100-110cc)</option>
+                  <option value="Bajaj Avenger 160 (160cc)">Bajaj Avenger 160 (160cc)</option>
+                </optgroup>
+
+                <optgroup label="Honda">
+                  <option value="Honda X-Blade 160 (160cc)">Honda X-Blade 160 (160cc)</option>
+                  <option value="Honda Hornet 160R (160cc)">Honda Hornet 160R (160cc)</option>
+                  <option value="Honda CB Shine / SP 125 (125cc)">Honda CB Shine / SP 125 (125cc)</option>
+                  <option value="Honda Livo 110 (110cc)">Honda Livo 110 (110cc)</option>
+                  <option value="Honda CBR 150R (150cc)">Honda CBR 150R (150cc)</option>
+                  <option value="Honda Dio / Activa Scooter (110cc)">Honda Dio / Activa Scooter (110cc)</option>
+                </optgroup>
+
+                <optgroup label="Suzuki">
+                  <option value="Suzuki Gixxer / Gixxer SF (155cc)">Suzuki Gixxer / Gixxer SF (155cc)</option>
+                  <option value="Suzuki GSX-R 150 (150cc)">Suzuki GSX-R 150 (150cc)</option>
+                  <option value="Suzuki Hayate 110 (110cc)">Suzuki Hayate 110 (110cc)</option>
+                  <option value="Suzuki Burgman / Access Scooter (125cc)">Suzuki Burgman / Access Scooter (125cc)</option>
+                </optgroup>
+
+                <optgroup label="Hero">
+                  <option value="Hero Thriller 160R (160cc)">Hero Thriller 160R (160cc)</option>
+                  <option value="Hero Hunk 150 (150cc)">Hero Hunk 150 (150cc)</option>
+                  <option value="Hero Glamour 125 (125cc)">Hero Glamour 125 (125cc)</option>
+                  <option value="Hero Splendor Plus / iSmart (100-110cc)">Hero Splendor Plus / iSmart (100-110cc)</option>
+                  <option value="Hero Passion Pro (110cc)">Hero Passion Pro (110cc)</option>
+                </optgroup>
+
+                <optgroup label="Other Brands / অন্যান্য বাইক">
+                  <option value="KTM Duke / RC (125-200cc)">KTM Duke / RC (125-200cc)</option>
+                  <option value="Lifan KPR / KP / KPT (150-165cc)">Lifan KPR / KP / KPT (150-165cc)</option>
+                  <option value="GPX Demon / GR165R (165cc)">GPX Demon / GR165R (165cc)</option>
+                  <option value="CFMoto (150-250cc)">CFMoto (150-250cc)</option>
+                  <option value="Other Commuter Bike (100cc - 125cc)">অন্যান্য কমিউটার বাইক (100cc - 125cc)</option>
+                  <option value="Other Sports Bike (150cc - 165cc)">অন্যান্য স্পোর্টস বাইক (150cc - 165cc)</option>
+                  <option value="Other Scooter (100cc - 150cc)">অন্যান্য স্কুটার (100cc - 150cc)</option>
+                </optgroup>
+              </select>
             </div>
           </div>
         </div>
 
+        <!-- সার্ভিসের ধরন ড্রপডাউন (বাংলা ও ইংলিশ বিস্তারিত ক্যাটাগরি) -->
         <div class="form-group">
           <label><i class="fa-solid fa-wrench"></i> সার্ভিসের ধরন | Service Type:</label>
           <div class="input-wrapper">
             <i class="fa-solid fa-toolbox field-icon"></i>
-            <select id="b_type" class="form-control">
-              <option value="General Service">জেনারেল সার্ভিস | General Service</option>
-              <option value="Master Service">মাস্টার সার্ভিস | Master Service</option>
-              <option value="Engine Tuning / Overhaul">ইঞ্জিন টিউনিং / ওভারহোল | Engine Work</option>
-              <option value="Wiring / Light Work">ওয়্যারিং ও ইলেকট্রিক্যাল | Electrical Work</option>
-              <option value="Other">অন্যান্য সমস্যা | Other Issue</option>
+            <select id="b_type" class="form-control" required>
+              <option value="" disabled selected>সার্ভিসের ধরন বেছে নিন | Select Service Category</option>
+              
+              <optgroup label="🔧 রেগুলার ও মাস্টার সার্ভিস | Regular & Master Service">
+                <option value="General Periodic Service">জেনারেল পিরিয়ডিক সার্ভিস | General Periodic Service (প্রতি ২৫০০-৩০০০ কিমি)</option>
+                <option value="Comprehensive Master Service">কম্প্রিহেন্সিভ মাস্টার সার্ভিস | Comprehensive Master Service (প্রতি ৮০০০-১০০০০ কিমি)</option>
+                <option value="Pre-Tour Full Inspection">লং ট্যুর প্রি-রাইড চেকআপ | Pre-Tour Highway Inspection</option>
+              </optgroup>
+
+              <optgroup label="⚙️ ইঞ্জিন ও ফুয়েল সিস্টেম | Engine & Fuel System">
+                <option value="Carburetor Tuning & Sonic Cleaning">কার্বুরেটর টিউনিং ও ক্লিনিং | Carburetor Ultrasonic Cleaning</option>
+                <option value="FI Cleaning & Diagnostic Test">এফআই ক্লিনিং ও ডায়াগনোসিস | Fuel Injection (FI) Service</option>
+                <option value="Tappet / Valve Clearance Adjustment">নিখুঁত ট্যাপেট ক্লিয়ারেন্স টিউনিং | Tappet/Valve Adjustment</option>
+                <option value="Full Engine Overhaul & Rebuild">ইঞ্জিন ওভারহোল ও রিবিল্ড | Complete Engine Overhaul</option>
+                <option value="Clutch Plate & Pressure Plate Change">ক্লাচ প্লেট ও প্রেশার প্লেট বদল | Clutch Plate Replacement</option>
+              </optgroup>
+
+              <optgroup label="🛑 ব্রেকিং ও সাসপেনশন | Brakes & Suspension">
+                <option value="Front Fork Oil Seal & Fluid Service">ফ্রন্ট ফর্ক সাসপেনশন ও অয়েল সিল | Fork Seal & Fluid Service</option>
+                <option value="Disc / Drum Brake Caliper Overhaul">ডিস্ক/ড্রাম ব্রেক সার্ভিস ও ফ্লুইড ফ্লাশ | Brake Service & Fluid Flush</option>
+                <option value="Steering Cone Set Adjustment/Change">স্টিয়ারিং কোন বল রেস অ্যাডজাস্ট/বদল | Steering Cone Set Service</option>
+                <option value="Wheel Bearing Check & Re-Greasing">হুইল বেয়ারিং চেক ও গ্রিজিং | Wheel Bearing Maintenance</option>
+              </optgroup>
+
+              <optgroup label="⚡ ইলেকট্রিক্যাল ও ওয়্যারিং | Electrical & Electronics">
+                <option value="Fog Light Installation with Dedicated Relay">ফগ লাইট ইনস্টলেশন (রিলে সহ) | Fog Light Setup with Relay</option>
+                <option value="Complete Wiring Harness Troubleshooting">ওয়্যারিং ও ইলেকট্রিক্যাল ট্রাবলশুটিং | Wiring Short-Circuit Repair</option>
+                <option value="Battery Health & Charging Coil Test">ব্যাটারি ও চার্জিং কয়েল চেক | Charging System Test</option>
+                <option value="Horn & Pass Switch Wiring Modification">হর্ন ও পাস সুইচ কাস্টম ওয়্যারিং | Switch & Horn Modification</option>
+              </optgroup>
+
+              <optgroup label="🛵 চেইন ও স্প্রকেট | Chain & Drive System">
+                <option value="Drive Chain Deep Clean & O-Ring Lube">ড্রাইভ চেইন ক্লিনিং ও ও-রিং লুব | Chain Clean & Lube</option>
+                <option value="Chain Sprocket Kit Replacement">চেইন স্প্রকেট কিট পরিবর্তন | Chain Sprocket Kit Replacement</option>
+              </optgroup>
+
+              <optgroup label="❓ অন্যান্য | Others">
+                <option value="Sound / Vibration Problem Diagnosis">অস্বাভাবিক শব্দ বা ভাইব্রেশন সমস্যা | Noise & Vibration Check</option>
+                <option value="Mileage Drop Issue Diagnosis">মাইলেজ ড্রপ ও পিকআপ ড্রপ সমস্যা | Mileage & Pickup Issue</option>
+                <option value="Other Mechanical Issue">অন্যান্য যেকোনো যান্ত্রিক সমস্যা | Other Mechanical Work</option>
+              </optgroup>
             </select>
           </div>
         </div>
@@ -558,7 +670,7 @@
           <label><i class="fa-solid fa-calendar-days"></i> সমস্যা বা পছন্দের তারিখ | Preferred Date / Issue Details:</label>
           <div class="input-wrapper textarea-wrapper">
             <i class="fa-solid fa-pen-clip field-icon"></i>
-            <textarea id="b_msg" class="form-control" rows="2" placeholder="কবে আসতে চান বা বাইকে কী সমস্যা হচ্ছে সংক্ষেপে লিখুন..."></textarea>
+            <textarea id="b_msg" class="form-control" rows="2" placeholder="কবে আসতে চান বা বাইকে নির্দিষ্ট কোনো সমস্যা থাকলে লিখুন..."></textarea>
           </div>
         </div>
 
